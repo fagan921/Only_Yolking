@@ -8,15 +8,13 @@
 //     <App />
 //   </StrictMode>,
 // )
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App.jsx';
+import Login from './components/Login.js';
+import Signup from './components/SignUp.js';
+import Home from './pages/Home.js';
 
-import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-// import 'bootstrap/dist/css/bootstrap.min.css'
-import App from './App.jsx'
-import Login from './components/Login.js'
-import Signup from './components/SignUp.js'
-// import Home from './pages/Home.js'
-import Navbar from './components/Navbar.js'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,17 +23,23 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navbar />
-      }, {
-        path: '/login',
+        element: <Home />
+      },
+      {
+        path: '/login', 
         element: <Login />
-      }, {
-        path: '/signup',
+      },
+      {
+        path: '/signup', 
         element: <Signup />
       }
     ]
   }
-])
+]);
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
+  
   <RouterProvider router={router} />
-)
+
+);
+console.log({RouterProvider})
