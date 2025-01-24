@@ -19,7 +19,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "concurrently": "^8.2.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0",
     "wait-on": "^7.2.0"
-}
+  },
+  "dependencies": {
+    "@apollo/client": "^3.12.7",
+    "react-router-dom": "^7.1.3"
+  }
 }
