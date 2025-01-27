@@ -6,7 +6,8 @@ interface CartItem {
     imageUrl: string; // Optional: Include an image for each item
   }
   
-  import { useState } from 'react';
+  import { useState, useEffect } from 'react';
+  import Auth from '../utils/auth';
 
 interface CartItem {
   id: number;
@@ -21,6 +22,13 @@ const Cart: React.FC = () => {
     { id: 1, name: 'Egg Sandwich', price: 5.99, quantity: 2, imageUrl: '/images/egg-sandwich.jpg' },
     { id: 2, name: 'Pancakes', price: 7.99, quantity: 1, imageUrl: '/images/pancakes.jpg' },
   ]);
+
+  useEffect(() => {
+    const authCheck = Auth.loggedIn()
+    if (!authCheck) {
+        window.location.assign('/login'); 
+    }
+  },[])
 
   // Calculate total price
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
