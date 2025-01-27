@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/dist/server.js",
+    "start": "node Server/dist/server.js",
     "start:dev": "concurrently \"cd Server && npm run watch\" \"wait-on tcp:3001 && cd Client && npm run dev\"",
     "server": "cd Server && npm start",
     "server:dev": "cd Server && npm run watch",
