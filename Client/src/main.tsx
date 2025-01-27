@@ -11,13 +11,13 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Cart from './components/cart';
+import Cart from './components/Cart';
 import Login from './components/Login';
 import Signup from './components/SignUp';
 
 import Home from './pages/Home';
 import App from './App';
-
+                             
 const router = createBrowserRouter([
   {
     path: '/',
