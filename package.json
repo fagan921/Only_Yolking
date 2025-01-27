@@ -12,7 +12,7 @@
     "client:build": "cd Client && npm run build",
     "client:dev": "cd Client && npm run dev",
     "seed": "cd Server && npm run seed",
-    "build": "concurrently \"cd Server && npm run build\" \"cd Client && npm run build\"",
+    "build": "npx concurrently \"cd Server && npm run build\" \"cd Client && npm run build\"",
     "render-build": "npm install && npm run build"
   },
   "keywords": [],
