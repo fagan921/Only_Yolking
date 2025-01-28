@@ -7,7 +7,11 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
+<<<<<<< HEAD
     "seed": "npm run build && node dist/seeds/seed.js",
+=======
+    "seed": "node dist/seeds/seed.js",
+>>>>>>> 54957120ae43a2d3900e5384533e045f732c0ab2
     "watch": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

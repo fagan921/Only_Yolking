@@ -10,11 +10,14 @@
 // )
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App.jsx';
-import Login from './components/Login.js';
-import Signup from './components/SignUp.js';
-import Home from './pages/Home.js';
 
+import Cart from './components/Cart';
+import Login from './components/Login';
+import Signup from './components/SignUp';
+
+import Home from './pages/Home';
+import App from './App';
+                             
 const router = createBrowserRouter([
   {
     path: '/',
@@ -23,23 +26,26 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />
+        element: <Home />,
       },
       {
-        path: '/login', 
-        element: <Login />
+        path: '/login',
+        element: <Login />,
       },
       {
-        path: '/signup', 
-        element: <Signup />
-      }
-    ]
-  }
+        path: '/signup',
+        element: <Signup />,
+      },
+      {
+        path: '/cart', // Add route for Cart
+        element: <Cart />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  
   <RouterProvider router={router} />
-
 );
-console.log({RouterProvider})
+
+console.log({ RouterProvider });

@@ -11,8 +11,12 @@
 
 # production
 /build
+<<<<<<< HEAD
 *dist
 
+=======
+/dist 
+>>>>>>> 54957120ae43a2d3900e5384533e045f732c0ab2
 # misc
 *.DS_Store
 *.env

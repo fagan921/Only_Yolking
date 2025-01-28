@@ -1,0 +1,146 @@
+[
+    {
+        "menuSection": "Egg in the hole Sandwiches",
+        "descriptionOfMenuSection": "Each Sandwich comes on Texas Toast with a nice runny yolk in each slice.",
+        "glutenFree": false,
+        "name": "Big Cheese",
+        "desription": "Three Cheese grilled cheese (Monterey Jack, Colby Jack, Havarti) toasted with garlic butter.*",
+        "price": 10.00
+    },
+    {
+        "menuSection": "Egg in the hole Sandwiches",
+        "descriptionOfMenuSection": "Each Sandwich comes on Texas Toast with a nice runny yolk in each slice.",
+        "glutenFree": false,
+        "name": "Some Pig",
+        "desription": "Sausage Patty, Monterey Jack & Colby Jack cheese, with our honey mustard sauce.*",
+        "price": 13.00
+    },
+    {
+        "menuSection": "Egg in the hole Sandwiches",
+        "descriptionOfMenuSection": "Each Sandwich comes on Texas Toast with a nice runny yolk in each slice.",
+        "glutenFree": false,
+        "name": "Green Eggs & Ham",
+        "desription": "Sliced honey ham, two slices of Havarti cheese with our pesto cream sauce.*",
+        "price": 13.00
+    },
+    {
+        "menuSection": "Egg in the hole Sandwiches",
+        "descriptionOfMenuSection": "Each Sandwich comes on Texas Toast with a nice runny yolk in each slice.",
+        "glutenFree": false,
+        "name": "The B.E.A.T",
+        "desription": "Two slices of bacon, avovado, tomato, Monterey Jack & Colby Jack cheese, with our spicy aioli.*",
+        "price": 15.00
+    },
+    {
+        "menuSection": "Egg in the hole Sandwiches",
+        "descriptionOfMenuSection": "Each Sandwich comes on Texas Toast with a nice runny yolk in each slice.",
+        "glutenFree": false,
+        "name": "Yolkers Smash",
+        "desription": "Smashed burger patty, Colby Jack & Monterey Jack cheese, house made burger sauce. add Bacon + $2",
+        "price": 15.00
+    },
+    {
+        "menuSection": "Tot-Nachos",
+        "descriptionOfMenuSection": "Choose any of our Sandwiches and turn them into Tot_Nachos",
+        "glutenFree": true,
+        "name": "",
+        "desription": "",
+        "price": 16.00
+    },
+    {
+        "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Just The Classic",
+        "desription": "This is simply the classic egg in the hole. One slice of Texas toast with an egg nestled in the hole in the center.*",
+        "price": 3.00
+    },
+    {
+        "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Tater Tots.",
+        "desription": "Tater tots come with two sauces",
+        "price": 5.00
+    },
+    {
+        "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Yolkers Avocado Toast",
+        "desription": "One classic egg in the hole topped with Avocado, a fried egg, and our housemade Garlic Chili Crisp oil.*",
+        "price": 10.00
+    },
+    {
+        "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Egg Salad Bites",
+        "desription": "Two toast rounds toasted in garlic butter topped with egg salad and green onions.",
+        "price": 10.00
+    },
+    {
+        "menuSection": "Salads",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Caesar Salad.",
+        "desription": "Our Caesar salad comes with chopped romaine lettuce, Ceaser dressing, shredded parmesan cheese, a hard boiled egg and seasoned pumkin seeds & croutons on top.*",
+        "price": 10.00
+    },
+    {
+        "menuSection": "Salads",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Bacon & Cheese",
+        "desription": "Our Bacon & Cheese salad comes with chopped romain lettuce, Aruguala, bacon, House vinaigrette dressing, shredded parmesan cheese, a hard boiled egg and croutons on top.*",
+        "price": 10.00
+    },
+    {
+        "menuSection": "Sauces",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Honey Mustard",
+        "desription": "",
+        "price": 0.00
+    },
+    {
+        "menuSection": "Sauces",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Ketchup",
+        "desription": "",
+        "price": 0.00
+    },
+    {
+        "menuSection": "Sauces",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Pesto Cream",
+        "desription": "",
+        "price": 0.00
+    },
+    {
+        "menuSection": "Sauces",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Ranch",
+        "desription": "",
+        "price": 0.00
+    },
+    {
+        "menuSection": "Sauces",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Spicy Aioli",
+        "desription": "",
+        "price": 0.00
+    },
+    {
+        "menuSection": "Sauces",
+        "descriptionOfMenuSection": "",
+        "glutenFree": false,
+        "name": "Burger Sauce",
+        "desription": "",
+        "price": 0.00
+    }
+]
