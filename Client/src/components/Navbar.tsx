@@ -25,27 +25,27 @@ const Navbar: React.FC = () => {
           <Link to="/about" className="text-white font-bold uppercase hover:underline">
             About
           </Link>
-          | |
+          
           <Link to="/find-us" className="text-white font-bold uppercase hover:underline">
             Find Us
           </Link>
-          | |
+          
           <Link to="/menu" className="text-white font-bold uppercase hover:underline">
             Menu
           </Link>
-          | |
+          
           <Link to="/gallery" className="text-white font-bold uppercase hover:underline">
             Gallery
           </Link>
-          | |
+          
           <Link to="/contact-us" className="text-white font-bold uppercase hover:underline">
             Contact Us
           </Link>
-          | |
+          
           <Link to="/shop" className="text-white font-bold uppercase hover:underline">
             Shop
           </Link>
-          | |
+          
         </div>
         {/* Order Now Button */}
         <div>
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             <Link className="btn btn-lg btn-info m-2" to="/login">
               Login
             </Link>
-            | |
+            
             <Link className="btn btn-lg btn-light m-2" to="/signup">
               Signup
             </Link>
