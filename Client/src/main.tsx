@@ -17,6 +17,7 @@ import Signup from './components/SignUp';
 
 import Home from './pages/Home';
 import App from './App';
+import './styles/globals.css';
                              
 const router = createBrowserRouter([
   {
