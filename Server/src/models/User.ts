@@ -6,6 +6,7 @@ interface IUser extends Document {
   username: string;
   email: string;
   password: string;
+  order:string;
   isCorrectPassword(password: string): Promise<boolean>;
 }
 
@@ -30,6 +31,9 @@ const userSchema = new Schema<IUser>(
       minlength: 5,
     },
     //add here eventually
+    order:{
+      
+    }
   },
   {
     timestamps: true,
