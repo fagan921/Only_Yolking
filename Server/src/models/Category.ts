@@ -1,4 +1,4 @@
-import mongoose, { Schema, Types, type Document } from 'mongoose';
+import mongoose, { Schema, type Document } from 'mongoose';
 
 interface ICategory extends Document {
     name: string;
