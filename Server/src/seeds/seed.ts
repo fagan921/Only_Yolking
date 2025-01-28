@@ -4,7 +4,7 @@ import cleanDB from './cleanDB.js';
 
 import userData from './userData.json' assert { type: 'json'};
 // import thoughtData from './thoughtData.json' assert { type: 'json' };
-
+// import categoryData from './categoryData.json' assert { type: 'json'};
 const seedDatabase = async (): Promise<void> => {
   try {
     await db();
