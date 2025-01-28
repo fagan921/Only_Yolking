@@ -9,14 +9,6 @@ interface CartItem {
   import { useState, useEffect } from 'react';
   import Auth from '../utils/auth';
 
-interface CartItem {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-  imageUrl: string;
-}
-
 const Cart: React.FC = () => {
   const [cartItems, setCartItems] = useState<CartItem[]>([
     { id: 1, name: 'Egg Sandwich', price: 5.99, quantity: 2, imageUrl: '/images/egg-sandwich.jpg' },
