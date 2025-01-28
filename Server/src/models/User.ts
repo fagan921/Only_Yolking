@@ -33,16 +33,19 @@ const userSchema = new Schema<IUser>(
       minlength: 5,
     },
     //add here eventually
-    product:{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Product',
-      required: true
-    },
-    order:{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Order',
-      required: true
-    }
+    // This product does NOT make sense here. 
+    // product:{
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: 'Product',
+    //   required: true
+    // },
+    
+    // Instead of putting the order id into the user model we sould put the user id into the order model.
+    // order:{
+    //   type: mongoose.Schema.Types.ObjectId,
+    //   ref: 'Order',
+    //   required: true
+    // }
   },
   {
     timestamps: true,

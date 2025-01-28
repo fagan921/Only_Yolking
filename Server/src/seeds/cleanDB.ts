@@ -1,15 +1,25 @@
-import { User } from '../models/index.js';
+import { 
+  User, 
+  Category, 
+  Products 
+} from '../models/index.js';
 import process from 'process';
 
 const cleanDB = async (): Promise<void> => {
   try {
-    // Delete documents from THought collection
-    // await Thought.deleteMany({});
-    // console.log('Thought collection cleaned.');
 
     // Delete documents from User collection
     await User.deleteMany({});
     console.log('User collection cleaned.');
+
+    await Products.deleteMany({});
+    console.log('Products collection cleaned.');
+
+    await Category.deleteMany({});
+    console.log('Category collection cleaned.');
+
+    console.log('🌱 Planting Seeds 🌱');
+
 
   } catch (err) {
     console.error('Error cleaning collections:', err);
