@@ -2,18 +2,27 @@ import React from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-type LayoutProps = {
+interface LayoutProps{
   children: React.ReactNode;
-};
+}
 
-function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
     </div>
   );
-}
+};
+
+// const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+//   return (
+//     <div className="bg-blue-400 min-h-screen">
+//       <Navbar />
+//       <main className="container mx-auto">{children}</main>
+//     </div>
+//   );
+// };
 
 export default Layout;

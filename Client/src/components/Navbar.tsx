@@ -1,6 +1,7 @@
 import { type MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
+import logo from '../images/logo.jpg';
 
 const Navbar: React.FC = () => {
   const logout = (event: MouseEvent<HTMLButtonElement>) => {
@@ -14,7 +15,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <div className="text-center flex-grow">
           <img
-            src="/logo.png" // Replace with your logo path
+            src={logo} // Replace with your logo path
             alt="Only Yolking"
             className="h-12 mx-auto"
           />
