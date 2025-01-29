@@ -6,8 +6,8 @@ interface IUser extends Document {
   username: string;
   email: string;
   password: string;
-  order: mongoose.Types.ObjectId;
-  product: mongoose.Types.ObjectId;
+  saveOrder: mongoose.Types.ObjectId;
+  
   isCorrectPassword(password: string): Promise<boolean>;
   
 }
@@ -33,12 +33,8 @@ const userSchema = new Schema<IUser>(
       minlength: 5,
     },
     //add here eventually
-    product:{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Product',
-      required: true
-    },
-    order:{
+   
+    saveOrder:{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Order',
       required: true
