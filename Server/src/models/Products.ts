@@ -7,7 +7,7 @@ export interface IProduct extends Document {
   price: number;
   quantity: number;
   category: mongoose.Types.ObjectId;
-  purchaseDate: string;
+  // purchaseDate: string;
 }
 
 const productSchema = new Schema<IProduct>({
@@ -37,13 +37,14 @@ const productSchema = new Schema<IProduct>({
     ref: 'Category',
     required: true
   },
-  purchaseDate: {
-    type: String,
-    required: true,
-  },
+  // This information doesnt make sence here. Would be better in orders. 
+  // purchaseDate: {
+  //   type: String,
+ // required: true,
+  // },
 
 });
 
-const Products = model('Order', productSchema);
+const Products = model('Product', productSchema);
 
 export default Products;

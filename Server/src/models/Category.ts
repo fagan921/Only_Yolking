@@ -17,11 +17,12 @@ const categorySchema = new Schema<ICategory>({
         type: String,
         trim: true,
     },
-    products: [ {
-        type: mongoose.Types.ObjectId,
-        ref: 'Product',
-    },
-],
+    // all the products will be linked to category
+    // products: [ {
+    //     type: mongoose.Types.ObjectId,
+    //     ref: 'Product',
+    // },
+// ],
 });
 
 

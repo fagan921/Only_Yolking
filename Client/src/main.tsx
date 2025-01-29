@@ -16,7 +16,9 @@ import Login from './components/Login';
 import Signup from './components/SignUp';
 
 import Home from './pages/Home';
+import Shop from './pages/Shop';
 import App from './App';
+import './styles/globals.css';
                              
 const router = createBrowserRouter([
   {
@@ -39,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: '/cart', // Add route for Cart
         element: <Cart />,
+      },
+      {
+        path: '/shop', // Add route for Cart
+        element: <Shop />,
       },
     ],
   },

@@ -1,0 +1,42 @@
+[
+    {
+        "name": "PLACE HOLDER T-SHIRT (Adult & Child",
+        "description": "Egg-cellent tees for every yolkster, big or small!",
+        "image": "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C81q%2BwWES6XL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png",
+        "price": 19.99,
+        "quantity": 5,
+        "category": "T-Shirts (Adult & Child)"
+    },
+    {
+        "name": "PLACE HOLDER HOODIES",
+        "description": "Stay toasty with our egg-stra cozy hoodies—perfect for cracking jokes in the cold!",
+        "image": "https://m.media-amazon.com/images/I/B1mEhjGJ2nL._CLa%7C2140%2C2000%7CB1lcdOJ6UZL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png",
+        "price": 49.99,
+        "quantity": 60,
+        "category": "Hoodies"
+    },
+    {
+        "name": "PLACE HOLDER HAT",
+        "description": "Top off your look with these egg-quisite hats. Scramble to grab one!",
+        "image": "https://ih1.redbubble.net/image.3576887451.8486/ssrco,baseball_cap,product,161D36:1628f0f39d,front_three_quarter,wide_portrait,750x1000-bg,f8f8f8.jpg",
+        "price": 15.00,
+        "quantity": 12,
+        "category": "Hats"
+    },
+    {
+        "name": "PLACE HOLDER MUG",
+        "description": "Sip your brew in these over-easy mugs—morning mood: sunny-side up!",
+        "image": "https://ih1.redbubble.net/image.1311686612.7682/ur,mug_lifestyle,tall_portrait,750x1000.jpg",
+        "price": 10.49,
+        "quantity": 30,
+        "category": "Mugs"
+    },
+    {
+        "name": "PLACE HOLDER STICKERS",
+        "description": "Stick with us! Egg-tremely fun stickers to add a yolky twist to anything.",
+        "image": "https://res.cloudinary.com/teepublic/image/private/s--jKQcpbpP--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_fffffe,e_outline:48/co_fffffe,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_auto:good:420,w_630/v1652140987/production/designs/30117156_0.jpg",
+        "price": 0.99,
+        "quantity": 100,
+        "category": "Stickers"
+    }
+]
