@@ -1,17 +1,17 @@
 [
     {
-        "username": "JollyGuru",
-        "email": "jolly@guru.com",
-        "password": "password"
+        "username": "test1",
+        "email": "test1@test.com",
+        "password": "password1234"
     },
     {
-        "username": "SunnyScribe",
-        "email": "sunny@scribe.com",
-        "password": "password"
+        "username": "test2",
+        "email": "test2@test.com",
+        "password": "password1234"
     },
     {
-        "username": "RadiantComet",
-        "email": "radiant@comet.com",
-        "password": "password"
+        "username": "test3",
+        "email": "test3@test.com",
+        "password": "password1234"
     }
 ]

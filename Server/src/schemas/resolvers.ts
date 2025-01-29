@@ -1,4 +1,4 @@
-import { User } from '../models/index.js';
+import { Products, User } from '../models/index.js';
 import { signToken, AuthenticationError } from '../utils/auth.js';
 import { GraphQLError } from 'graphql';
 
@@ -37,6 +37,11 @@ const resolvers = {
         throw new GraphQLError("auth error")
       }
     },
+
+    getProducts: async () => {
+      const allProducts = await Products.find({}).populate("category");
+      return allProducts;
+    }
   },
 
   // Query to get the authenticated user's information
