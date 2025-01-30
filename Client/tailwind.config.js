@@ -1,13 +1,18 @@
 module.exports = {
-  important: true,
-  theme: {
-    fontFamily: {
-      display: ['Gilroy', 'sans-serif'],
-      body: ['Graphik', 'sans-serif'],
+    content: [
+      "./src/**/*.{html,js,jsx,ts,tsx}",
+    ],
+    theme: {
+      extend: {},
     },
+<<<<<<< Updated upstream
+    plugins: [],
+  };
+=======
     extend: {
       colors: {
         cyan: '#9cdbff',
+        onlyyolkingblue: '#38B6FF',
       },
       margin: {
         '96': '24rem',
@@ -19,3 +24,4 @@ module.exports = {
     opacity: ['responsive', 'hover']
   }
 }
+>>>>>>> Stashed changes
