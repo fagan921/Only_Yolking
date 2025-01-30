@@ -1,30 +1,11 @@
-import { User } from '../models/index.js';
+// import { use } from 'react';
+import {  Order, Products, User } from '../models/index.js';
 import { signToken, AuthenticationError } from '../utils/auth.js';
 import { GraphQLError } from 'graphql';
 
-// Define types for the arguments
-// interface AddUserArgs {
-//   input:{
-//     username: string;
-//     email: string;
-//     password: string;
-//   }
-// }
-
-// interface LoginUserArgs {
-//   email: string;
-//   password: string;
-// }
-
-// interface UserArgs {
-//   username: string;
-// }
-
 const resolvers = {
   Query: {
-    // users: async () => {
-    //   return User.find().populate('thoughts');
-    // },
+    
     getSingleUser: async (_parent: any, _args: any, context: any) => {
       if (context?.user) {
         const foundUser = await User.findOne({ _id: context.user._id });
@@ -34,23 +15,35 @@ const resolvers = {
         return foundUser;
       } else {
         throw new AuthenticationError('Could not authenticate user.');
-        throw new GraphQLError("auth error")
+      
       }
     },
+
+    getProducts: async () => {
+      const allProducts = await Products.find({}).populate("category");
+      return allProducts;
+    },
+   
+    // getProduct: async () => {
+    //   return await Products.findOne();
+    // },
+    // getOrders: async () => {
+    //   return await Order.find();
+    // },
   },
-
-  // Query to get the authenticated user's information
-  // The 'me' query relies on the context to check if the user is authenticated
-  // me: async (_parent: any, _args: any, context: any) => {
-  //   // If the user is authenticated, find and return the user's information along with their thoughts
-  //   if (context.user) {
-  //     return User.findOne({ _id: context.user._id }).populate('thoughts');
-  //   }
-  //   // If the user is not authenticated, throw an AuthenticationError
-  //   throw new AuthenticationError('Could not authenticate user.');
-  // },
-
-  // },
+  Category:{
+    products: async(category:any)=>{
+      return await Products.find({category: category._id})
+    }
+  },
+  Order: {
+    user: async (order: any) => {
+      return await User.findById(order.user);
+    },
+    products: async (order: any) => {
+      return await Products.find({ _id: { $in: order.products } });
+    },
+  },
   Mutation: {
     createUser: async (
       _parent: any,
@@ -81,22 +74,62 @@ const resolvers = {
       const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
+    // createOrder: async(
+    //   _parent:any, _args:any,_context:any
+    // )=>{
+    //   const updatedUser = await User.
+    // }
+    deleteUser: async(_parent:any,_args:any,context:any)=>{
+      
+     
+        const user = await User.findByIdAndDelete({ _id: context.user._id })
+        if (!user) {
+          return null;
+        }
+        
+        return { message: 'User has been deleted'};
+    },
+    createProduct: async(_parent: any, args: { name: string, description: string, image: string, price: number, quantity: number, category: string })=>{
+      const newProduct = new Products({
+        name: args.name,
+        description: args.description,
+        image: args.image,
+        price: args.price,
+        quantity: args.quantity,
+        category: args.category,
+      });
 
-    // addThought: async (_parent: any, { input }: AddThoughtArgs, context: any) => {
-    //   if (context.user) {
-    //     const thought = await Thought.create({ ...input });
+      await newProduct.save();
+      return newProduct;
+    },  
+    
+    createOrders: async (_parent: any, args: { userId: string, orders: Array<any> }) => {
+      const user = await User.findById(args.userId);
 
-    //     await User.findOneAndUpdate(
-    //       { _id: context.user._id },
-    //       { $addToSet: { thoughts: thought._id } }
-    //     );
+      if (!user) {
+        throw new Error("User not found");
+      }
 
-    //     return thought;
-    //   }
-    //   throw AuthenticationError;
-    //   ('You need to be logged in!');
-    // },
+      const newOrders = args.orders.map((order: any) => {
+        const newOrder = new Order({
+          user: user._id,
+          ...order,
+        });
+
+        return newOrder.save();
+      });
+
+      return await Promise.all(newOrders);
+    },
+      
+
   },
+
+  User: {
+    saveOrder: async (user: any) => {
+      return await Order.find({ user: user._id });
+    },
+  }
 };
 
 export default resolvers;

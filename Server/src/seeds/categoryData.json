@@ -1,5 +1,6 @@
 [
-    { "name": "T-Shirts (Adult & Child)", "description": "Egg-cellent tees for every yolkster, big or small!" },
+    { "name": "T-Shirts (Adult)", "description": "Egg-cellent tees for every yolkster, big or small!" },
+    { "name": "T-Shirts (Child)", "description": "Egg-cellent tees for every yolkster, big or small!" },
     { "name": "Hoodies", "description": "Stay toasty with our egg-stra cozy hoodies—perfect for cracking jokes in the cold!" },
     { "name": "Hats", "description": "Top off your look with these egg-quisite hats. Scramble to grab one!" },
     { "name": "Mugs", "description": "Sip your brew in these over-easy mugs—morning mood: sunny-side up!" },

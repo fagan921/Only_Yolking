@@ -43,10 +43,12 @@
         "menuSection": "Tot-Nachos",
         "descriptionOfMenuSection": "Choose any of our Sandwiches and turn them into Tot_Nachos",
         "glutenFree": true,
+        "desription": "null",
         "price": 16.00
     },
     {
         "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
         "name": "Just The Classic",
         "desription": "This is simply the classic egg in the hole. One slice of Texas toast with an egg nestled in the hole in the center.*",
@@ -54,6 +56,7 @@
     },
     {
         "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
         "name": "Tater Tots.",
         "desription": "Tater tots come with two sauces",
@@ -61,6 +64,7 @@
     },
     {
         "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
         "name": "Yolkers Avocado Toast",
         "desription": "One classic egg in the hole topped with Avocado, a fried egg, and our housemade Garlic Chili Crisp oil.*",
@@ -68,6 +72,7 @@
     },
     {
         "menuSection": "Small Bites",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
         "name": "Egg Salad Bites",
         "desription": "Two toast rounds toasted in garlic butter topped with egg salad and green onions.",
@@ -75,6 +80,7 @@
     },
     {
         "menuSection": "Salads",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
         "name": "Caesar Salad.",
         "desription": "Our Caesar salad comes with chopped romaine lettuce, Ceaser dressing, shredded parmesan cheese, a hard boiled egg and seasoned pumkin seeds & croutons on top.*",
@@ -82,6 +88,7 @@
     },
     {
         "menuSection": "Salads",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
         "name": "Bacon & Cheese",
         "desription": "Our Bacon & Cheese salad comes with chopped romain lettuce, Aruguala, bacon, House vinaigrette dressing, shredded parmesan cheese, a hard boiled egg and croutons on top.*",
@@ -89,32 +96,50 @@
     },
     {
         "menuSection": "Sauces",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
-        "name": "Honey Mustard"
+        "desription": "null",
+        "name": "Honey Mustard",
+        "price": 10.00
     },
     {
         "menuSection": "Sauces",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
-        "name": "Ketchup"
+        "desription": "null",
+        "name": "Ketchup",
+        "price": 10.00
     },
     {
         "menuSection": "Sauces",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
-        "name": "Pesto Cream"
+        "desription": "null",
+        "name": "Pesto Cream",
+        "price": 10.00
     },
     {
         "menuSection": "Sauces",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
-        "name": "Ranch"
+        "desription": "null",
+        "name": "Ranch",
+        "price": 10.00
     },
     {
         "menuSection": "Sauces",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
-        "name": "Spicy Aioli"
+        "desription": "null",
+        "name": "Spicy Aioli",
+        "price": 10.00
     },
     {
         "menuSection": "Sauces",
+        "descriptionOfMenuSection": "null",
         "glutenFree": false,
-        "name": "Burger Sauce"
+        "desription": "null",
+        "name": "Burger Sauce",
+        "price": 10.00
     }
 ]

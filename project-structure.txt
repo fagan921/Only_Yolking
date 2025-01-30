@@ -1,0 +1,146 @@
+.
+├── Client
+│   ├── README.md
+│   ├── dist
+│   │   ├── assets
+│   │   │   ├── IMG_0329.JPG
+│   │   │   ├── IMG_0330.JPG
+│   │   │   ├── IMG_0331.JPG
+│   │   │   ├── IMG_0332.JPG
+│   │   │   ├── index-1YAmcx15.js
+│   │   │   └── react.svg
+│   │   └── index.html
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js.txt
+│   ├── public
+│   │   ├── assets
+│   │   │   ├── IMG_0329.JPG
+│   │   │   ├── IMG_0330.JPG
+│   │   │   ├── IMG_0331.JPG
+│   │   │   ├── IMG_0332.JPG
+│   │   │   └── react.svg
+│   │   └── index.html
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.tsx
+│   │   ├── components
+│   │   │   ├── Button.tsx
+│   │   │   ├── Cart.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── GalleryItem.tsx
+│   │   │   ├── Layout.tsx
+│   │   │   ├── LayoutOld.tsx
+│   │   │   ├── Login.tsx
+│   │   │   ├── Map.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   └── SignUp.tsx
+│   │   ├── graphQL
+│   │   │   ├── mutations
+│   │   │   │   ├── register_login.ts
+│   │   │   │   └── submitImage.ts
+│   │   │   └── queries
+│   │   │       ├── gallery.ts
+│   │   │       └── products.ts
+│   │   ├── images
+│   │   │   ├── beanie.jpg
+│   │   │   ├── dog-badge.jpg
+│   │   │   ├── hoodie.jpg
+│   │   │   ├── logo.jpg
+│   │   │   ├── menu-1.jpg
+│   │   │   ├── menu-2.jpg
+│   │   │   ├── mug.jpg
+│   │   │   ├── sticker.jpg
+│   │   │   └── t-shirt.jpg
+│   │   ├── index.css
+│   │   ├── index.tsx
+│   │   ├── main.tsx
+│   │   ├── pages
+│   │   │   ├── About.tsx
+│   │   │   ├── Checkout.tsx
+│   │   │   ├── ContactUs.tsx
+│   │   │   ├── FindUs.tsx
+│   │   │   ├── Gallery.tsx
+│   │   │   ├── Home.tsx
+│   │   │   ├── Menu.tsx
+│   │   │   └── Shop.tsx
+│   │   ├── routes
+│   │   │   └── Routes.tsx
+│   │   ├── styles
+│   │   │   └── globals.css
+│   │   ├── utils
+│   │   │   ├── api.ts
+│   │   │   └── auth.ts
+│   │   └── vite-env.d.ts
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.node.json
+│   └── vite.config.ts
+├── LICENSE
+├── README.md
+├── Server
+│   ├── dist
+│   │   ├── config
+│   │   │   └── connection.js
+│   │   ├── models
+│   │   │   ├── Category.js
+│   │   │   ├── Order.js
+│   │   │   ├── Products.js
+│   │   │   ├── User.js
+│   │   │   └── index.js
+│   │   ├── schemas
+│   │   │   ├── index.js
+│   │   │   ├── resolvers.js
+│   │   │   └── typeDefs.js
+│   │   ├── seeds
+│   │   │   ├── category.js
+│   │   │   ├── categoryData.json
+│   │   │   ├── cleanDB.js
+│   │   │   ├── productData.json
+│   │   │   ├── seed.js
+│   │   │   └── userData.json
+│   │   ├── server.js
+│   │   └── utils
+│   │       ├── Email.js
+│   │       └── auth.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── src
+│   │   ├── config
+│   │   │   └── connection.ts
+│   │   ├── models
+│   │   │   ├── Category.ts
+│   │   │   ├── Order.ts
+│   │   │   ├── Products.ts
+│   │   │   ├── User.ts
+│   │   │   └── index.ts
+│   │   ├── schemas
+│   │   │   ├── index.ts
+│   │   │   ├── resolvers.ts
+│   │   │   └── typeDefs.ts
+│   │   ├── seeds
+│   │   │   ├── category.ts
+│   │   │   ├── categoryData.json
+│   │   │   ├── cleanDB.ts
+│   │   │   ├── menuData.json
+│   │   │   ├── productData.json
+│   │   │   ├── seed.ts
+│   │   │   └── userData.json
+│   │   ├── server.ts
+│   │   ├── types
+│   │   │   └── express
+│   │   │       └── index.d.ts
+│   │   └── utils
+│   │       ├── Email.ts
+│   │       └── auth.ts
+│   └── tsconfig.json
+├── package-lock.json
+├── package.json
+├── project-structure.txt
+├── tailwind.config.js
+└── tsconfig.json
+
+31 directories, 113 files

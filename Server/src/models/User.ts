@@ -1,4 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
+import mongoose, { Schema, model, Document } from 'mongoose';
 import bcrypt from 'bcrypt';
 
 // Define an interface for the User document
@@ -6,8 +6,10 @@ interface IUser extends Document {
   username: string;
   email: string;
   password: string;
-  order:string;
+  saveOrder: mongoose.Types.ObjectId[];
+  // customerDetails:string;
   isCorrectPassword(password: string): Promise<boolean>;
+  
 }
 
 // Define the schema for the User document
@@ -31,9 +33,21 @@ const userSchema = new Schema<IUser>(
       minlength: 5,
     },
     //add here eventually
-    order:{
-      
-    }
+   
+    saveOrder:[{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Order',
+      required: true
+    }],
+    // customerDetails: {
+    //   fullName: { type: String, required: true },
+    //   email: { type: String, required: true },
+    //   address: { type: String, required: true },
+    //   city: { type: String, required: true },
+    //   state: { type: String, required: true },
+    //   zip: { type: String, required: true },
+    //   country: { type: String, required: true },
+    // },
   },
   {
     timestamps: true,

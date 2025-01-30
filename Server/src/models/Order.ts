@@ -2,7 +2,7 @@ import { Schema, model, type Document } from 'mongoose';
 
 export interface IOrder extends Document {
     purchaseDate:string;
-    products:string;
+    products:Schema.Types.ObjectId[];
     totalAmount:string;
     paymentId:string;
     paymentStatus:string;
@@ -46,5 +46,4 @@ const orderSchema = new Schema({
 });
 
 const Order = model('Order', orderSchema);
-
-module.exports = Order;
+export default Order;

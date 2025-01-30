@@ -1,0 +1,50 @@
+[
+    {
+        "name": "T-SHIRT (Adult)",
+        "description": "Sizes come in L, XL, XXL",
+        "image": "/assets/t-shirt.jpg",
+        "price": 20.00,
+        "quantity": 10000,
+        "category": "T-Shirts (Adult)"
+    },
+    {
+        "name": "T-SHIRT (Child)",
+        "description": "Sizes come in S, M",
+        "image": "/assets/t-shirt.jpg",
+        "price": 16.00,
+        "quantity": 10000,
+        "category": "T-Shirts (Child)"
+    },
+    {
+        "name": "HOODIES",
+        "description": "Sizes come in S, M, L, XL, XXL",
+        "image": "/assets/hoodie.jpg",
+        "price": 40.00,
+        "quantity": 10000,
+        "category": "Hoodies"
+    },
+    {
+        "name": "BEANIE",
+        "description": "",
+        "image": "/assets/beanie.jpg",
+        "price": 20.00,
+        "quantity": 10000,
+        "category": "Hats"
+    },
+    {
+        "name": "PLACE HOLDER MUG",
+        "description": "",
+        "image": "/assets/mug.jpg",
+        "price": 15.00,
+        "quantity": 10000,
+        "category": "Mugs"
+    },
+    {
+        "name": "PLACE HOLDER STICKERS",
+        "description": "",
+        "image": "/assets/sticker.jpg",
+        "price": 2.00,
+        "quantity": 10000,
+        "category": "Stickers"
+    }
+]
