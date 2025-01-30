@@ -1,4 +1,4 @@
-import { Schema, model, type Document } from 'mongoose';
+import mongoose, { Schema, model, type Document } from 'mongoose';
 
 export interface IProduct extends Document {
   name: string;
@@ -6,7 +6,7 @@ export interface IProduct extends Document {
   image: string;
   price: number;
   quantity: number;
-  // category: mongoose.Types.ObjectId;
+  category: mongoose.Types.ObjectId;
   // purchaseDate: string;
 }
 
@@ -32,11 +32,11 @@ const productSchema = new Schema<IProduct>({
     min: 0,
     default: 0
   },
-  // category: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'Category',
-  //   required: true
-  // },
+  category: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category',
+    required: true
+  },
   // This information doesnt make sence here. Would be better in orders. 
   // purchaseDate: {
   //   type: String,
