@@ -17,6 +17,8 @@ interface Product {
 
 function Shop() {
     const { loading, data, error } = useQuery(GET_PRODUCTS)
+    console.log(data);
+    
     if (error) {
         console.log(JSON.stringify(error));
     }
