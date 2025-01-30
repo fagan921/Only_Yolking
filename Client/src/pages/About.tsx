@@ -3,13 +3,14 @@ import Layout from '../components/Layout';
 
 function About() {
   return (
-    <Layout>
-      <div className="flex items-center justify-center min-h-screen bg-gray-50 p-6">
-        <div className="max-w-3xl text-center border-2 border-gray-300 rounded-lg p-8 bg-white shadow-md">
-          <p className="text-lg text-gray-800 leading-relaxed">
-            "We are Liz and Koa, the proud owners of <strong>Only Yolking!</strong> Our food cart was born from a shared
+      <div className="flex items-center justify-center min-h-screen bg-gray-50 px-8 py-16">
+        <div className="w-full max-w-5xl text-center border-4 border-gray-400 rounded-xl p-12 bg-white shadow-lg">
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-8">About Us</h1>
+          <p className="text-2xl text-gray-800 font-semibold leading-relaxed">
+            "We are <span className="font-extrabold text-blue-600">Liz and Koa</span>, the proud owners of{' '}
+            <span className="text-blue-600 font-extrabold">Only Yolking!</span> Our food cart was born from a shared
             love of cooking and all things breakfast. The classic egg-in-the-hole, known by many names, holds a special
-            place in countless hearts, including ours. 
+            place in countless hearts, including ours.
             <br /><br />
             For me, Liz, it’s more than just comfort food—it’s a cherished memory. My mom would make egg-in-the-holes 
             for me growing up, whether to lift my spirits or to fuel me before a big day.
@@ -19,7 +20,6 @@ function About() {
           </p>
         </div>
       </div>
-    </Layout>
   );
 }
 
