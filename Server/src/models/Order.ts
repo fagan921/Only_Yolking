@@ -2,7 +2,7 @@ import { Schema, model, type Document } from 'mongoose';
 
 export interface IOrder extends Document {
     purchaseDate:string;
-    products:string;
+    products:Schema.Types.ObjectId[];
     totalAmount:string;
     paymentId:string;
     paymentStatus:string;
