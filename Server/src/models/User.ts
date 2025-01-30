@@ -6,7 +6,7 @@ interface IUser extends Document {
   username: string;
   email: string;
   password: string;
-  order: mongoose.Types.ObjectId;
+  // order: mongoose.Types.ObjectId;
   product: mongoose.Types.ObjectId;
   isCorrectPassword(password: string): Promise<boolean>;
   
