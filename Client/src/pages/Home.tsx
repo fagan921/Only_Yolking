@@ -1,21 +1,10 @@
-<<<<<<< Updated upstream
-// import React from 'react';
-import Layout from "../components/Layout";
-=======
 import React from "react";
 import truck from "../images/truck.png";
 import sandwich1 from "../images/sandwich-1.png"
 import '../index.css';
->>>>>>> Stashed changes
 
 const Home: React.FC = () => {
   return (
-<<<<<<< Updated upstream
-    <Layout>
-    <div className="container mx-auto text-center p-8">
-      <h1 className="text-4xl font-bold mb-4">Welcome to Only Yolking!</h1>
-      <p>Check out our menu or find us on the map!</p>
-=======
     <div>
       {/* Hero Section */}
       <section className="hero bg-skyblue text-center py-16">
@@ -94,7 +83,6 @@ const Home: React.FC = () => {
           </form>
         </div>
       </section>
->>>>>>> Stashed changes
     </div>
     </Layout>
   );
