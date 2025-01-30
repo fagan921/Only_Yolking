@@ -24,12 +24,12 @@ const resolvers = {
       return allProducts;
     },
    
-    getProduct: async () => {
-      return await Products.findOne();
-    },
-    getOrders: async () => {
-      return await Order.find();
-    },
+    // getProduct: async () => {
+    //   return await Products.findOne();
+    // },
+    // getOrders: async () => {
+    //   return await Order.find();
+    // },
   },
   Category:{
     products: async(category:any)=>{
