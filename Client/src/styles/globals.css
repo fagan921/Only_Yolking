@@ -1,0 +1,17 @@
+<<<<<<< Updated upstream
+=======
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* @import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities"; */
+
+@import "tailwindcss";
+
+.bg-skyblue {
+    background-color: #38B6FF;
+}
+>>>>>>> Stashed changes
