@@ -1,5 +1,4 @@
 import mongoose, { Schema, model, type Document } from 'mongoose';
-
 export interface IProduct extends Document {
   name: string;
   description: string;
@@ -9,7 +8,6 @@ export interface IProduct extends Document {
   category: mongoose.Types.ObjectId;
   // purchaseDate: string;
 }
-
 const productSchema = new Schema<IProduct>({
   name: {
     type: String,
@@ -37,14 +35,12 @@ const productSchema = new Schema<IProduct>({
     ref: 'Category',
     required: true
   },
-  // This information doesnt make sence here. Would be better in orders. 
+  // This information doesnt make sence here. Would be better in orders.
   // purchaseDate: {
   //   type: String,
  // required: true,
   // },
-
 });
-
 const Products = model('Product', productSchema);
 
 export default Products;
