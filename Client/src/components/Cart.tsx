@@ -8,8 +8,20 @@ interface CartItem {
   
   import { useState, useEffect } from 'react';
   import Auth from '../utils/auth';
+  import { loadStripe } from '@stripe/stripe-js';
+  import { useLazyQuery } from '@apollo/client';
+  import { QUERY_CHECKOUT } from '../graphQL/queries/checkout.js';
+  // import { useStoreContext } from '../utils/';
+  // import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../utils/actions.js';
+
+  const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart: React.FC = () => {
+
+  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
+
+
+
   const [cartItems, setCartItems] = useState<CartItem[]>([
     { id: 1, name: 'Egg Sandwich', price: 5.99, quantity: 2, imageUrl: '/images/egg-sandwich.jpg' },
     { id: 2, name: 'Pancakes', price: 7.99, quantity: 1, imageUrl: '/images/pancakes.jpg' },
@@ -21,6 +33,15 @@ const Cart: React.FC = () => {
         window.location.assign('/login'); 
     }
   },[])
+
+  // checks if data is changed upon checkout
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res:any) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
 
   // Calculate total price
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -52,6 +73,20 @@ const Cart: React.FC = () => {
 
   return (
     <div className="p-4 bg-gray-100">
+
+
+      {/* THIS IS A TEST CHECKOUT BUTTON */}
+      <button onClick={() => {
+        getCheckout({
+          variables: {
+            products: [
+                "679beb91ad950e4bbfb793be",
+                "679beb91ad950e4bbfb793c0"
+            ]
+          }
+        });
+      }}>Checkout!</button>
+
       <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
       {cartItems.length > 0 ? (
         <div>
