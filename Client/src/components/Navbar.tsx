@@ -25,6 +25,7 @@ function Navbar() {
           <Link to="/gallery" className="text-white font-bold uppercase hover:underline">Gallery</Link>
           <Link to="/contact-us" className="text-white font-bold uppercase hover:underline">Contact Us</Link>
           <Link to="/shop" className="text-white font-bold uppercase hover:underline">Shop</Link>
+          <Link to="/cart" className="text-white font-bold uppercase hover:underline">Cart</Link>
           <a
             href="https://doordash.com"
             target="_blank"
