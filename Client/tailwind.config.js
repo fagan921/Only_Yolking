@@ -5,10 +5,6 @@ module.exports = {
     theme: {
       extend: {},
     },
-<<<<<<< Updated upstream
-    plugins: [],
-  };
-=======
     extend: {
       colors: {
         cyan: '#9cdbff',
@@ -24,4 +20,3 @@ module.exports = {
     opacity: ['responsive', 'hover']
   }
 }
->>>>>>> Stashed changes
