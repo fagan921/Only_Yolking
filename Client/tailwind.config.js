@@ -5,6 +5,7 @@ module.exports = {
     theme: {
       extend: {},
     },
+    plugins: [],
     extend: {
       colors: {
         cyan: '#9cdbff',
@@ -14,8 +15,7 @@ module.exports = {
         '96': '24rem',
         '128': '32rem',
       },
-    }
-  },
+    },
   variants: {
     opacity: ['responsive', 'hover']
   }
