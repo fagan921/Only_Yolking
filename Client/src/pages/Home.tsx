@@ -1,6 +1,6 @@
 import React from "react";
-// import truck from "../images/truck.png";
-// import sandwich1 from "../images/sandwich-1.png"
+import truck from "../images/truck.png";
+import sandwich1 from "../images/sandwich-1.png"
 import '../index.css';
 
 const Home: React.FC = () => {
@@ -9,11 +9,11 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="hero bg-skyblue text-center py-16">
         <div className="container mx-auto px-4">
-          {/* <img
+          <img
             src={truck}
             alt="Food Truck"
             className="mx-auto w-3/4 max-w-md"
-          /> */}
+          />
           <h1 className="text-4xl font-bold mt-6"></h1>
           <p className="text-lg mt-4">Egg in the Hole Sandwiches</p>
           <button className="mt-6 bg-white text-yellow-500 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100">
@@ -40,11 +40,11 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-6">Food examples</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="menu-item bg-white p-6 rounded-lg shadow-md">
-              {/* <img
+              <img
                 src={sandwich1}
                 alt="Sandwich 1"
                 className="w-full h-40 object-cover rounded-md"
-              /> */}
+              />
               {/* <h3 className="text-xl font-bold mt-4">Classic Egg Sandwich</h3>
               <p className="text-gray-600">$5.99</p> */}
             </div>
