@@ -32,7 +32,7 @@
         "category": "Hats"
     },
     {
-        "name": "PLACE HOLDER MUG",
+        "name": "MUG",
         "description": "",
         "image": "/assets/mug.jpg",
         "price": 15.00,
@@ -40,7 +40,7 @@
         "category": "Mugs"
     },
     {
-        "name": "PLACE HOLDER STICKERS",
+        "name": "STICKERS",
         "description": "",
         "image": "/assets/sticker.jpg",
         "price": 2.00,
