@@ -1,22 +1,24 @@
 module.exports = {
-    content: [
-      "./src/**/*.{html,js,jsx,ts,tsx}",
-    ],
-    theme: {
-      extend: {},
-    },
-    plugins: [],
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  theme: {
     extend: {
       colors: {
-        cyan: '#9cdbff',
-        onlyyolkingblue: '#38B6FF',
+        cyan: "#9cdbff",
+        onlyyolkingblue: "#38B6FF", // Same as primary
+        primary: "#38B6FF", // Blue
+        secondary: "#FFF4E5", // Soft Apricot
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
       },
       margin: {
-        '96': '24rem',
-        '128': '32rem',
+        "96": "24rem",
+        "128": "32rem",
       },
     },
+  },
+  plugins: [],
   variants: {
-    opacity: ['responsive', 'hover']
-  }
-}
+    opacity: ["responsive", "hover"],
+  },
+};
