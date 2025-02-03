@@ -22,8 +22,13 @@ function Gallery() {
 
   return (
       <div className="container mx-auto py-8 px-4 text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">Our Gallery</h1>
-        <p className="text-lg text-gray-600 mb-10">Click on an image to view it in full size.</p>
+        <h1
+        className="text-4xl sm:text-5xl font-semibold text-blue-400 mb-5"
+        style={{ fontFamily: 'Genty, serif' }}
+      >
+        Pet Gallery
+      </h1>
+        <p className="text-lg text-gray-600 mb-1">Click on an image to view it in full size.</p>
 
         {/* Gallery Grid */}
         <div className="flex flex-wrap justify-center">

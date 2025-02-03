@@ -1,88 +1,190 @@
 import React from "react";
 import truck from "../images/truck.png";
 import sandwich1 from "../images/sandwich-1.png"
+import sandwich2 from "../images/sandwich-2.png"
+import sandwich3 from "../images/sandwich-3.png"
+import grid1 from "../images/grid-1.png"
+import grid2 from "../images/grid-2.png"
+import grid3 from "../images/grid-3.png"
+import grid4 from "../images/grid-4.png"
+import grid5 from "../images/grid-5.png"
+import grid6 from "../images/grid-6.png"
+import grid7 from "../images/grid-7.png"
+import grid8 from "../images/grid-8.png"
+import grid9 from "../images/grid-9.png"
+import menu from "../images/menu-1.jpg"
+import dogBadge from "../images/dog-badge.png"
+
 import '../index.css';
 
 const Home: React.FC = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero bg-skyblue text-center py-16">
-        <div className="container mx-auto px-4">
+      <section className="hero bg-skyblue text-[#FFF4E5] py-4">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+          {/* Left: Truck Image */}
           <img
             src={truck}
             alt="Food Truck"
-            className="mx-auto w-3/4 max-w-md"
+            className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl md:-ml-16"
           />
-          <h1 className="text-4xl font-bold mt-6"></h1>
-          <p className="text-lg mt-4">Egg in the Hole Sandwiches</p>
-          <button className="mt-6 bg-white text-yellow-500 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100">
-            Order Now
-          </button>
-        </div>
-      </section>
-      {/* About Section */}
-      <section className="about bg-white py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold">Only Yolking</h2>
-          <p className="text-gray-600 mt-4">
-            Each sandwich is served on thick,
-            golden Texas toast, perfectly toasted
-            and complete with a rich, runny
-            yolk nestled in each slice for a truly
-            indulgent bite.
-          </p>
-        </div>
-      </section>
-      {/* Menu Section */}
-      <section className="menu bg-gray-100 py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-6">Food examples</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="menu-item bg-white p-6 rounded-lg shadow-md">
-              <img
-                src={sandwich1}
-                alt="Sandwich 1"
-                className="w-full h-40 object-cover rounded-md"
-              />
-              {/* <h3 className="text-xl font-bold mt-4">Classic Egg Sandwich</h3>
-              <p className="text-gray-600">$5.99</p> */}
-            </div>
-            {/* Repeat for other sandwiches */}
+          {/* text */}
+          <div className="text-center md:text-right md:w-2/5 pr-2 ml-auto mr-auto">
+            <h1 className="text-5xl font-medium font-roboto whitespace-nowrap leading-tight mb-9">
+              Egg in the <br /> Hole Sandwiches
+            </h1>
+            <a href="https://doordash.com"
+              target="_blank"
+              rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide">
+              ORDER NOW
+            </a>
           </div>
         </div>
       </section>
-      {/* Pet Gallery Section */}
-      <section className="pet-gallery bg-yellow-100 py-12 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold">Pet Gallery</h2>
-          <p className="text-gray-600 mt-4">
-            Check out our customers' furry friends!
-          </p>
-          <button className="mt-6 bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-400">
-            View Pet Gallery
-          </button>
+
+
+      {/* Sanwiches Section */}
+      <section
+        className="py-8 flex justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/bg-2.png')" }}
+      >
+        <div className="max-w-5xl w-full px-6 flex flex-col md:flex-row items-center gap-12 justify-center mx-auto">
+          <div className="flex flex-col gap-10 md:w-1/3">
+            <img src={sandwich1} alt="Sandwich 1" className="w-68 h-auto rounded-lg -mb-20 -mt-15" />
+            <img src={sandwich2} alt="Sandwich 2" className="w-68 h-auto rounded-lg -mb-20 -mt-15" />
+            <img src={sandwich3} alt="Sandwich 3" className="w-68 h-auto rounded-lg -mb-10 -mt-15" />
+          </div>
+          <div className="md:w-2/3 text-left pl-4">
+            <h1 className="text-5xl font-medium font-genty text-[#38B6FF] whitespace-nowrap leading-tight">Only Yolking</h1>
+            <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm">
+              Each sandwich is served on thick, golden Texas toast, perfectly toasted and complete with a rich, runny yolk nestled in each slice for a truly indulgent bite.
+            </p>
+            <a href="https://doordash.com"
+              target="_blank"
+              rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide">
+              GET CRACKIN'
+            </a>
+          </div>
         </div>
       </section>
-      {/* Newsletter Signup Section */}
-      <section className="newsletter bg-blue-500 text-white py-12 text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold">Stay in Touch</h2>
-          <p className="text-lg mt-4">
-            Subscribe to our newsletter for updates!
+
+
+      {/* IG-style grid */}
+      <section className="menu bg-skyblue py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl text-[#FFF4E5] font-bold text-center mb-6">Yolked-Up Favorites</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div className="menu-item">
+              <img src={grid1} alt="Sandwich 1" className="w-full aspect-square object-cover rounded-md" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $5.99</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid2} alt="Sandwich 2" className="w-full aspect-square object-cover rounded-md" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $6.49</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid3} alt="Sandwich 3" className="w-full aspect-square object-cover rounded-md" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $7.29</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid4} alt="Sandwich 4" className="w-full aspect-square object-cover rounded-md" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $6.99</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid5} alt="Sandwich 5" className="w-full aspect-square object-cover rounded-md" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $5.49</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid6} alt="Sandwich 6" className="w-full aspect-square object-cover rounded-md" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $7.99</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid7} alt="Sandwich 7" className="w-full aspect-square object-cover rounded-lg" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $6.59</p>
+            </div>
+
+            <div className="menu-item">
+              <img src={grid8} alt="Sandwich 8" className="w-full aspect-square object-cover rounded-lg" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $5.79</p>
+            </div>
+
+            {/* Placeholder */}
+            {/* <div className="menu-item border-dashed border-2 border-gray-300 flex items-center justify-center text-[#FFF4E5] aspect-square"> */}
+            <div className="menu">
+              <img src={grid9} alt="Sandwich 9" className="w-full aspect-square object-cover rounded-lg" />
+              <p className="text-[#FFF4E5] mt-2">Awesome sandwich name $5.79</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* menu-pdf */}
+      <section className="menu bg-skyblue py-4">
+        <div className="max-w-5xl mx-auto px-4">
+          <img src={menu} alt="Menu" />
+        </div>
+      </section>
+
+
+      {/* Pets */}
+      <section className="py-16 flex justify-center bg-cover bg-center" style={{ backgroundImage: "url('/assets/bg-2.png')" }}>
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+
+          <div className="text-left md:w-1/2">
+            <h2 className="text-4xl font-bold text-[#38B6FF] font-roboto">Pet Gallery</h2>
+            <p className="text-3xl font-roboto text-[#38B6FF] leading-relaxed max-w-smleading-relaxed">
+              Bring your furry friends along to <span className="font-bold">Only Yolking!</span> Snap a photo of your pet while you enjoy your meal,
+              and we’ll add them to our pet photo gallery. <br /><br />
+              Come for the sandwiches, stay for the <span className="font-bold text-[#38B6FF]">paw-sitive vibes!</span>
+            </p>
+            <button className="mt-10 bg-skyblue text-[#FFF4E5] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide">
+              PET GALLERY
+            </button>
+          </div>
+
+          <div className="md:w-1/2 flex justify-center">
+            <img src={dogBadge} alt="Dog Badge" className="w-full max-w-xs md:max-w-md rounded-lg" />
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* Newsletter */}
+      <section className="bg-skyblue py-12 flex justify-center">
+        <div className="container mx-auto px-6 text-center max-w-2xl">
+
+          <h2 className="text-4xl font-bold text-[#FFF4E5] font-roboto">Stay in the Yolk!</h2>
+
+          <p className="text-lg text-[#FFF4E5] mt-4">
+            Subscribe to our newsletter for **egg-citing** updates, special deals, and all things <span className="font-bold">Only Yolking!</span>
           </p>
-          <form className="mt-6 flex flex-col md:flex-row justify-center items-center gap-4">
+
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-2 rounded-lg text-gray-700"
+              className="px-4 py-3 w-full sm:w-2/3 border border-[#FFF4E5] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FFF4E5] text-[#FFF4E5]"
             />
-            <button className="bg-yellow-500 px-6 py-3 rounded-full font-semibold hover:bg-yellow-400">
+            <button className="bg-[#FFF4E5] text-[#38B6FF] font-bold px-6 py-3 rounded-xl hover:bg-[#FFC107]">
               Subscribe
             </button>
-          </form>
+          </div>
+
+          <p className="text-sm text-[#FFF4E5] mt-4 italic">
+            No spam, just **egg-cellent** content. 🥚✨
+          </p>
+
         </div>
       </section>
+
     </div>
   );
 };
