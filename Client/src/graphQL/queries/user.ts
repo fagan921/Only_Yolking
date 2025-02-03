@@ -24,6 +24,14 @@ query Query {
         }
       }
     }
+    saveCart {
+      _id
+      name
+      description
+      image
+      price
+      quantity
+    }
   }
 }
 `;

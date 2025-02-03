@@ -1,6 +1,6 @@
 import mongoose, { Schema, model, Document } from 'mongoose';
 import bcrypt from 'bcrypt';
-
+import { IProduct } from './Products';
 // Define an interface for the User document
 interface IUser extends Document {
   username: string;
@@ -9,6 +9,7 @@ interface IUser extends Document {
   saveOrder: mongoose.Types.ObjectId[];
   // customerDetails:string;
   isCorrectPassword(password: string): Promise<boolean>;
+  saveCart: IProduct[];
   
 }
 
@@ -39,6 +40,12 @@ const userSchema = new Schema<IUser>(
       ref: 'Order',
       required: true
     }],
+    saveCart: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+      },
+    ],
     // customerDetails: {
     //   fullName: { type: String, required: true },
     //   email: { type: String, required: true },
@@ -54,6 +61,7 @@ const userSchema = new Schema<IUser>(
     toJSON: { getters: true },
     toObject: { getters: true },
   }
+  
 );
 
 userSchema.pre<IUser>('save', async function (next) {

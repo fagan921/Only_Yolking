@@ -22,6 +22,7 @@ const typeDefs = `
         email: String!
         password: String!
         saveOrder: [Order]!
+        saveCart:[Product]!
     }
 
     type Order {
@@ -48,7 +49,7 @@ const typeDefs = `
         getSingleUser: User
         getProducts: [Product]
         getOrders:[Order]
-       checkout(products: [ID]!): Checkout
+       checkout: Checkout
     }
     input OrderInput {
         products: [String]!
@@ -65,6 +66,9 @@ const typeDefs = `
         createProduct(name: String!, description: String, image: String, price: Float, quantity: Int,category: ID!): Product
         createOrders(userId: ID!, orders: [OrderInput!]!): [Order]
         deleteUser(userId:ID):User
+        addToCart(productId:ID):User
+        removeFromCart(productId:ID):User
+        removeItemFromCart(productId:ID):User
     }
 `;
 
