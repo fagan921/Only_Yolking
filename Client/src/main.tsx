@@ -12,6 +12,7 @@ import Shop from './pages/Shop';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import Signup from './components/SignUp';
+import Success from './pages/Success';
 
 import './styles/globals.css';
 
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       { path: 'cart', element: <Cart /> },
       { path: 'login', element: <Login /> },
       { path: 'signup', element: <Signup /> },
-      // { path: "success", element: <Success />}
+      { path: "success", element: <Success />}
     ],
   },
 ]);
