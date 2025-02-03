@@ -7,7 +7,7 @@ import { GraphQLError } from "graphql";
 const stripe = new Stripe(
   process.env.STRIPE_KEY || ""
 );
-
+console.log("test")
 const resolvers = {
   Query: {
     getSingleUser: async (_parent: any, _args: any, context: any) => {
