@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Auth from "../utils/auth";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery, useQuery, useMutation } from "@apollo/client";
-import { CartItem } from "../types/cart-item.js";
+// import { CartItem } from "../types/cart-item.js";
 import { QUERY_CHECKOUT } from "../graphQL/queries/checkout.js";
 import { GET_USER } from "../graphQL/queries/user.js";
 // import { useStoreContext } from '../utils/';

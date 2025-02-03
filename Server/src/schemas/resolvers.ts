@@ -1,14 +1,13 @@
-// import { use } from 'react';
-// const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
+
 import Stripe from "stripe";
 import { Order, Products, User } from "../models/index.js";
 import { signToken, AuthenticationError } from "../utils/auth.js";
 import { GraphQLError } from "graphql";
 
 const stripe = new Stripe(
-  "sk_test_51QnYOlPoCoQFktOpGfHYfwkg1sB5M90yO9xGti6YnyVLmVPGFTdkycftIQJNAzARWH9g23sqhGnUo32zKPlSpn1e00GAfsfhct"
+  process.env.STRIPE_KEY || ""
 );
-
+console.log("test")
 const resolvers = {
   Query: {
     getSingleUser: async (_parent: any, _args: any, context: any) => {
