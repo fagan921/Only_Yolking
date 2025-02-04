@@ -10,7 +10,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        genty: ["Genty", "cursive"],
+        genty: ["Genty Regular", "serif"],
         roboto: ["Roboto", "sans-serif"],
       },
       margin: {

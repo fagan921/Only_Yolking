@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col gap-10 md:w-1/3">
             <img src={sandwich1} alt="Sandwich 1" className="w-68 h-auto rounded-lg -mb-20 -mt-15" />
             <img src={sandwich2} alt="Sandwich 2" className="w-68 h-auto rounded-lg -mb-20 -mt-15" />
-            <img src={sandwich3} alt="Sandwich 3" className="w-68 h-auto rounded-lg -mb-10 -mt-15" />
+            <img src={sandwich3} alt="Sandwich 3" className="w-68 h-auto rounded-lg -mb-10 -mt-12" />
           </div>
           <div className="md:w-2/3 text-left pl-4">
             <h1 className="text-5xl font-medium font-genty text-[#38B6FF] whitespace-nowrap leading-tight">Only Yolking</h1>
