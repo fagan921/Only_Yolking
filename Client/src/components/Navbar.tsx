@@ -1,7 +1,7 @@
 import { useState, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
-import logo from '../images/logo.jpg';
+import logo from '/public/assets/logo-square.png';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +11,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-blue-400 py-4 shadow-md">
+    <nav className="bg-skyblue py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center px-6">
-        {/* Logo */}
-        <div className="text-center">
-          <img src={logo} alt="Only Yolking" className="h-12" />
-        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -32,17 +28,27 @@ function Navbar() {
           <Link to="/find-us" className="text-white font-bold uppercase hover:underline">Find Us</Link>
           <Link to="/menu" className="text-white font-bold uppercase hover:underline">Menu</Link>
           <Link to="/gallery" className="text-white font-bold uppercase hover:underline">Gallery</Link>
+
+          {/* Logo */}
+          <Link to="/" className="flex-1 flex justify-center md:static absolute left-1/2 transform -translate-x-1/2">
+            <img
+              src={logo}
+              alt="Only Yolking Logo"
+              className="h-24 sm:h-32 md:h-32 lg:h-40 w-auto"
+            />
+          </Link>
+          
           <Link to="/contact-us" className="text-white font-bold uppercase hover:underline">Contact Us</Link>
           <Link to="/shop" className="text-white font-bold uppercase hover:underline">Shop</Link>
           <Link to="/cart" className="text-white font-bold uppercase hover:underline">Cart</Link>
-          <a
+          {/* <a
             href="https://doordash.com"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-blue-400 font-bold px-4 py-2 rounded-lg shadow hover:bg-blue-100 transition"
           >
             Order Now
-          </a>
+          </a> */}
 
           {/* Authentication Links (Desktop) */}
           {Auth.loggedIn() ? (
@@ -75,7 +81,7 @@ function Navbar() {
             <Link to="/contact-us" className="text-white text-lg font-bold uppercase hover:underline" onClick={() => setIsOpen(false)}>Contact</Link>
             <Link to="/shop" className="text-white text-lg font-bold uppercase hover:underline" onClick={() => setIsOpen(false)}>Shop</Link>
             <Link to="/cart" className="text-white text-lg font-bold uppercase hover:underline" onClick={() => setIsOpen(false)}>Cart</Link>
-            <a
+            {/* <a
               href="https://doordash.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -83,7 +89,7 @@ function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Order Now
-            </a>
+            </a> */}
 
             {/* Authentication Links (Mobile) */}
             {Auth.loggedIn() ? (
