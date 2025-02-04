@@ -13,3 +13,12 @@
 .bg-skyblue {
     background-color: #38B6FF;
 }
+@font-face {
+    font-family: "Genty Regular";
+    src: url('/assets/GentyDemo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.custom{
+    font-family: "MyCustomFont", sans-serif;
+}
