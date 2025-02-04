@@ -3,6 +3,7 @@ const typeDefs = `
         _id: ID!
         name: String
         description: String
+        size: [String]
         image: String
         price: Float
         quantity: Int

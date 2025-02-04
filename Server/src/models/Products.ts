@@ -2,6 +2,7 @@ import mongoose, { Schema, model, type Document } from 'mongoose';
 export interface IProduct extends Document {
   name: string;
   description: string;
+  size: string[];
   image: string;
   price: number;
   quantity: number;
@@ -17,6 +18,10 @@ const productSchema = new Schema<IProduct>({
   description: {
     type: String
   },
+  // what size options we have = NA, S, M, L, XL, XXL
+  size:{
+      type: [String]
+    },
   image: {
     type: String
   },

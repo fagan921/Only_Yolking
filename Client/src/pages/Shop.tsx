@@ -12,11 +12,7 @@ function Shop() {
     })
     const [notification, setNotification] = useState("");
 
-    console.log(data);
-
-
     const addToCart = async (event: any) => {
-
 
         console.log("addind to cart!");
 
@@ -44,11 +40,13 @@ function Shop() {
         console.log(JSON.stringify(error));
     }
     const productData: Product[] = data?.getProducts || [];
+    console.log(productData);
+
 
     return (
         <div className="container mx-auto px-0 py-10">
             <div className="">
-            {/* bg-blue-400 py-4 shadow-md right-150px */}
+                {/* bg-blue-400 py-4 shadow-md right-150px */}
                 <div className="text-white font-bold uppercase hover:underline">
                     {notification}
                 </div>
@@ -67,10 +65,19 @@ function Shop() {
                                 </div>
                             </a>
                             <div className="px-4 pb-5">
+                                {/* <br /> */}
                                 <a href="#">
-                                    <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{product.name}</h5>
+                                    <h5 className="mt-3 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{product.name}</h5>
                                 </a>
                                 <p className="text-gray-700 dark:text-white text-sm mt-1">{product.description}</p>
+
+                                { product.size.length>0 && <><label htmlFor="sizes" className="sr-only">Choose a size</label>
+                                <select id="sizes" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>Choose a size</option>
+                                    {product.size.map((size, i) => (
+                                        <option key={i} value={size}>{size}</option>
+                                    ))}
+                                </select></>}
 
                                 <div className="flex items-center justify-between mt-3">
                                     <span className="text-2xl font-bold text-gray-900 dark:text-white">${product.price}</span>

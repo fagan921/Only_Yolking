@@ -17,10 +17,18 @@ const seedDatabase = async (): Promise<void> => {
 
     const updatedProducts = productData.map(product => {
       const category_id = categories.find(category => category.name === product.category)?._id;
+      
       return { ...product, category: category_id as string };
     });
 
     await Products.insertMany(updatedProducts); // Bulk insert for efficiency
+    
+    // for (const product of productData){
+    //   const category_id = categories.find(category => category.name === product.category)?._id;
+      
+    //   const newProduct = await Products.create({ ...product, category: category_id as string });
+    //  console.log(newProduct);
+    // };
 
     console.log('🎉🌱 Seeding completed successfully! 🌱🎉');
 
