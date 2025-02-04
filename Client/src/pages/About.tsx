@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import owners from "../images/owners.png";
 import liz from "../images/liz.png";
 
@@ -40,22 +40,25 @@ const About: React.FC = () => {
 
         {/* Image Section */}
         <div className="flex flex-col items-center gap-10 md:w-1/3">
-          <motion.img
+          {/* <motion.img
             src={owners}
             alt="Owners"
             className="w-80 md:w-full rounded-xl shadow-lg"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-          />
-          <motion.img
+          /> */}
+          <img src={owners} alt="Owners" className="w-80 md:w-full rounded-xl shadow-lg" />
+
+          {/* <motion.img
             src={liz}
             alt="Liz"
             className="w-56 md:w-64 rounded-lg shadow-md"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-          />
+          /> */}
+          <img src={liz} alt="Liz" className="w-56 md:w-64 rounded-lg shadow-md" />
         </div>
       </div>
     </div>
