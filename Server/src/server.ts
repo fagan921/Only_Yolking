@@ -16,7 +16,7 @@ const startApolloServer = async () => {
   await server.start();
   await db();
 
-  const PORT = process.env.PORT || 3001;
+  const PORT = process.env.PORT||3001;
   const app = express();
 
   app.use(express.urlencoded({ extended: false }));
@@ -29,6 +29,7 @@ const startApolloServer = async () => {
   ));
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
+  //
   console.log("Current directory:", __dirname);
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../../Client/dist')));

@@ -5,7 +5,7 @@ import { signToken, AuthenticationError } from "../utils/auth.js";
 import { GraphQLError } from "graphql";
 
 const stripe = new Stripe(
-  process.env.STRIPE_KEY || ""
+  process.env.STRIPE_KEY || "sk_test_51J3QZyK5Q7Z"
 );
 console.log("test")
 const resolvers = {
