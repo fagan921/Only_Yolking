@@ -11,8 +11,8 @@ const About: React.FC = () => {
     >
       {/* Page Title */}
       <h1
-        className="text-5xl sm:text-7xl font-semibold text-yellow-500 mt-6 sm:mt-8 mb-8 text-center tracking-wide"
-        style={{ fontFamily: "'Genty Regular', serif" }}
+        className="text-4xl sm:text-5xl text-yellow-400 mb-5"
+        style={{ fontFamily: 'Genty Regular, serif' }}
       >
         Meet The Yolkers
       </h1>

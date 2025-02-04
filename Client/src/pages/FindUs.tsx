@@ -4,11 +4,11 @@ import Map from '../components/Map';
 
 function FindUs() {
   return (
-    <div className="container mx-auto py-12 px-6 flex flex-col items-center">
+    <div className="container mx-auto py-10 px-6 flex flex-col items-center">
       {/* Page Title with Exact Styling */}
       <h1
-        className="text-4xl sm:text-5xl font-semibold text-blue-400 mb-5"
-        style={{ fontFamily: 'Gentry, serif' }}
+        className="text-4xl sm:text-5xl text-blue-400 mb-5"
+        style={{ fontFamily: 'Genty Regular, serif' }}
       >
         Find Us
       </h1>

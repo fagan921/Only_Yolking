@@ -2,12 +2,10 @@
 
 function ContactUs() {
   return (
-    <div className="container mx-auto py-16 px-6 flex flex-col items-center">
-      {/* Page Title with Gentry Font */}
-      <h1
-        className="text-4xl sm:text-5xl font-semibold text-blue-400 mb-8"
-        style={{ fontFamily: 'Gentry, serif' }}
-      >
+    <div className="container mx-auto py-10 px-4 flex flex-col items-center">
+      {/* Page Title with Genty Font */}
+      <h1 className="text-4xl sm:text-5xl text-blue-400 mb-5"
+        style={{ fontFamily: 'Genty Regular, serif' }}>
         Contact Us
       </h1>
 

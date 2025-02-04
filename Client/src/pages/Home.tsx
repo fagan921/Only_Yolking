@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           </div>
           <div className="md:w-2/3 text-left pl-4">
             <h1 className="text-5xl font-medium font-genty text-[#38B6FF] whitespace-nowrap leading-tight">Only Yolking</h1>
-            <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm">
+            <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm mb-6">
               Each sandwich is served on thick, golden Texas toast, perfectly toasted and complete with a rich, runny yolk nestled in each slice for a truly indulgent bite.
             </p>
             <a href="https://doordash.com"

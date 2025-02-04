@@ -3,10 +3,10 @@
 
 function Menu() {
   return (
-    <div className="container mx-auto py-8 px-4 text-center">
+    <div className="container mx-auto py-10 px-4 text-center">
       {/* Page Title with Genty Font */}
       <h1
-        className="text-4xl sm:text-5xl font-semibold text-blue-400 mb-5"
+        className="text-4xl sm:text-5xl text-blue-400 mb-5"
         style={{ fontFamily: 'Genty Regular, serif' }}
       >
         Our Menu
