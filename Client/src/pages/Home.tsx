@@ -20,7 +20,7 @@ import '../index.css';
 const Home: React.FC = () => {
   return (
     <div>
-      <section className="hero bg-skyblue text-[#FFF4E5] py-1">
+      <section className="hero bg-skyblue text-[#FFF4E5] -mt-8">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           {/* Left: Truck Image */}
           <img
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           />
           {/* text */}
           <div className="text-center md:text-right md:w-2/5 pr-2 ml-auto mr-auto">
-            <h1 className="text-5xl font-medium font-roboto whitespace-nowrap leading-tight mb-9 shadow-[#a681d8]">
+            <h1 className="text-5xl font-medium font-roboto whitespace-nowrap leading-tight mb-9 shadow-[#000000]">
               Egg in the <br /> Hole Sandwiches
             </h1>
             <a href="https://doordash.com"
