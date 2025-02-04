@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "framer-motion": "^12.0.11",
     "react-hot-toast": "^2.5.1"
   }
 }
