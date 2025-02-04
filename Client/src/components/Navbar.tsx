@@ -1,7 +1,7 @@
 import { useState, MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
-import logo from '/public/assets/logo-square.png';
+import logo from '/public/assets/only-yolking-txt.png';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +21,13 @@ function Navbar() {
         >
           ☰
         </button>
+          <Link to="/" className="">
+            <img
+              src={logo}
+              alt="Only Yolking Logo"
+              className="h-24 sm:h-32 md:h-32 lg:h-40 w-auto"
+            />
+          </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-6">
@@ -30,13 +37,6 @@ function Navbar() {
           <Link to="/gallery" className="text-white font-bold uppercase hover:underline">Gallery</Link>
 
           {/* Logo */}
-          <Link to="/" className="flex-1 flex justify-center md:static absolute left-1/2 transform -translate-x-1/2">
-            <img
-              src={logo}
-              alt="Only Yolking Logo"
-              className="h-24 sm:h-32 md:h-32 lg:h-40 w-auto"
-            />
-          </Link>
           
           <Link to="/contact-us" className="text-white font-bold uppercase hover:underline">Contact Us</Link>
           <Link to="/shop" className="text-white font-bold uppercase hover:underline">Shop</Link>
@@ -53,14 +53,14 @@ function Navbar() {
           {/* Authentication Links (Desktop) */}
           {Auth.loggedIn() ? (
             <>
-              <Link to="/me" className="text-white font-bold hover:underline">
-                {Auth.getProfile().data.username}'s Profile
-              </Link>
+              <div className="text-white font-bold">
+                Hey {Auth.getProfile().data.username}!
+              </div>
               <button
                 onClick={logout}
-                className="bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition"
+                className="bg-[#FCD91A] text-[#5766BC] px-4 py-2 rounded-lg shadow hover:bg-red-600 transition font-roboto"
               >
-                Logout
+                LOGOUT
               </button>
             </>
           ) : (
@@ -94,9 +94,9 @@ function Navbar() {
             {/* Authentication Links (Mobile) */}
             {Auth.loggedIn() ? (
               <>
-                <Link to="/me" className="text-white text-lg font-bold hover:underline" onClick={() => setIsOpen(false)}>
+                {/* <Link to="/me" className="text-white text-lg font-bold hover:underline" onClick={() => setIsOpen(false)}>
                   {Auth.getProfile().data.username}'s Profile
-                </Link>
+                </Link> */}
                 <button
                   onClick={() => {
                     logout();
