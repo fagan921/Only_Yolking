@@ -15,27 +15,33 @@ import grid9 from "../images/grid-9.png"
 import menu from "../images/menu-1.jpg"
 import dogBadge from "../images/dog-badge.png"
 
-import '../index.css';
 
 const Home: React.FC = () => {
   return (
     <div>
-      <section className="hero bg-skyblue text-[#FFF4E5] -mt-8">
+      {/* <section className="hero bg-skyblue text-[#FFF4E5] -mt-8">
+        <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between"> */}
+          {/* OG code 02/04/25 */}
+          <section className="hero bg-skyblue text-[#FFF4E5] -mt-8">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           {/* Left: Truck Image */}
           <img
             src={truck}
             alt="Food Truck"
             className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl md:-ml-16"
+          // className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl md:-ml-16"
           />
           {/* text */}
           <div className="text-center md:text-right md:w-2/5 pr-2 ml-auto mr-auto">
             <h1 className="text-5xl font-medium font-roboto whitespace-nowrap leading-tight mb-9 shadow-[#000000]">
+            {/* <div className="text-center md:text-right md:w-2/5 pr-2 ml-auto mr-auto">
+            <h1 className="text-5xl font-medium font-roboto whitespace-nowrap leading-tight mb-9 shadow-[#000000]"> */}
               Egg in the <br /> Hole Sandwiches
             </h1>
             <a href="https://doordash.com"
               target="_blank"
               rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide">
+              {/* className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide"> */}
               ORDER NOW
             </a>
           </div>
@@ -56,7 +62,7 @@ const Home: React.FC = () => {
           </div>
           <div className="md:w-2/3 text-left pl-4">
             <h1 className="text-5xl font-medium font-genty text-[#38B6FF] whitespace-nowrap leading-tight">Only Yolking</h1>
-            <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm">
+            <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm mb-6">
               Each sandwich is served on thick, golden Texas toast, perfectly toasted and complete with a rich, runny yolk nestled in each slice for a truly indulgent bite.
             </p>
             <a href="https://doordash.com"

@@ -21,10 +21,10 @@ function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-      <div className="container mx-auto py-8 px-4 text-center">
+      <div className="container mx-auto py-10 px-4 text-center">
         <h1
-        className="text-4xl sm:text-5xl font-semibold text-blue-400 mb-5"
-        style={{ fontFamily: 'Genty, serif' }}
+        className="text-4xl sm:text-5xl text-blue-400 mb-5"
+        style={{ fontFamily: 'Genty Regular, serif' }}
       >
         Pet Gallery
       </h1>
