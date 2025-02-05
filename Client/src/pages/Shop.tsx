@@ -20,8 +20,8 @@ function Shop() {
         console.log(event.target.id);
 
         const productId = event.target.id;
-
-        console.log("Added!");
+        
+        console.log("Added!");  
         try {
             const response = await addAddToCart({
                 variables: { productId },
