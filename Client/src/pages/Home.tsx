@@ -14,6 +14,7 @@ import grid8 from "../images/grid-8.png"
 import grid9 from "../images/grid-9.png"
 import menu from "../images/menu-1.jpg"
 import dogBadge from "../images/dog-badge.png"
+import { Link } from "react-router-dom";
 
 
 const Home: React.FC = () => {
@@ -38,7 +39,7 @@ const Home: React.FC = () => {
             <h1 className="text-5xl font-medium font-roboto whitespace-nowrap leading-tight mb-9 shadow-[#000000]"> */}
               Egg in the <br /> Hole Sandwiches
             </h1>
-            <a href="https://doordash.com"
+            <a href="https://www.doordash.com/store/only-yolking-eugene-31165337/"
               target="_blank"
               rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide">
               {/* className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide"> */}
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
       {/* Sanwiches Section */}
       <section
         className="py-8 flex justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/bg-2.png')" }}
+        style={{ backgroundImage: "url('/assets/bg-eggcarton.png')" }}
       >
         <div className="max-w-5xl w-full px-6 flex flex-col md:flex-row items-center gap-12 justify-center mx-auto">
           <div className="flex flex-col gap-10 md:w-1/3">
@@ -60,12 +61,16 @@ const Home: React.FC = () => {
             <img src={sandwich2} alt="Sandwich 2" className="w-68 h-auto rounded-lg -mb-20 -mt-15" />
             <img src={sandwich3} alt="Sandwich 3" className="w-68 h-auto rounded-lg -mb-10 -mt-12" />
           </div>
-          <div className="md:w-2/3 text-left pl-4">
+          <div className="md:w-2/3 text-end pl-4">
             <h1 className="text-5xl font-medium font-genty text-[#38B6FF] whitespace-nowrap leading-tight">Only Yolking</h1>
-            <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm mb-6">
+            <p className="text-2xl md:text-right font-roboto text-[#38B6FF] leading-relaxed mb-6">
+            {/* <p className="text-3xl md:text-right font-roboto text-[#38B6FF] leading-relaxed max-w-sm OR max-h- ml-60 mb-6"> */}
               Each sandwich is served on thick, golden Texas toast, perfectly toasted and complete with a rich, runny yolk nestled in each slice for a truly indulgent bite.
             </p>
-            <a href="https://doordash.com"
+            <p className="text-2xl md:text-right font-roboto text-[#38B6FF] leading-relaxed mb-6">
+            It's paired with layers of savory, melted cheese and your choice of crispy bacon or smoky ham, creating the ultimate comfort food experience.
+            </p>
+            <a href="https://www.doordash.com/store/only-yolking-eugene-31165337/"
               target="_blank"
               rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide">
               GET CRACKIN'
@@ -140,19 +145,22 @@ const Home: React.FC = () => {
 
 
       {/* Pets */}
-      <section className="py-16 flex justify-center bg-cover bg-center" style={{ backgroundImage: "url('/assets/bg-2.png')" }}>
+      <section className="py-16 flex justify-center bg-cover bg-center" style={{ backgroundImage: "url('/assets/bg-eggcarton.png')" }}>
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
-          <div className="text-left md:w-1/2">
+          <div className="md:w-2/3 text-start pl-4">
             <h2 className="text-4xl font-bold text-[#38B6FF] font-roboto">Pet Gallery</h2>
-            <p className="text-3xl font-roboto text-[#38B6FF] leading-relaxed max-w-smleading-relaxed">
+            <p className="text-2xl font-roboto text-[#38B6FF] leading-relaxed mt-5">
               Bring your furry friends along to <span className="font-bold">Only Yolking!</span> Snap a photo of your pet while you enjoy your meal,
-              and we’ll add them to our pet photo gallery. <br /><br />
-              Come for the sandwiches, stay for the <span className="font-bold text-[#38B6FF]">paw-sitive vibes!</span>
+              and we’ll add them to our pet photo gallery.
+              Come for the sandwiches, stay for the paw-sitive vibes!
             </p>
-            <button className="mt-10 bg-skyblue text-[#FFF4E5] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide">
+            <div className='mt-10'>
+            <Link to='/gallery'
+            className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide">
               PET GALLERY
-            </button>
+            </Link>
+            </div>
           </div>
 
           <div className="md:w-1/2 flex justify-center">
