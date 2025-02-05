@@ -109,7 +109,7 @@ function Navbar() {
             )}
           </div>
         )}
-        <div className="lg:hidden flex items-center space-x-4"> 
+        <div className="flex items-center space-x-4"> 
           <Link to="/cart" className="">
             <img
               src={cart}
