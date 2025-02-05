@@ -43,20 +43,22 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+    <main className="flex-row justify-center items-center min-h-screen mb-4 p-4">
+      <div className="col-12 col-lg-10 flex justify-center">
+        <div className="card w-full max-w-md">
+          <h4 className="card-header text-center text-xl font-semibold p-2">
+            Sign Up
+          </h4>
+          <div className="card-body text-center col-auto content-center p-4">
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to="/" className="text-blue-500 hover:underline">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form onSubmit={handleFormSubmit} className="space-y-4">
                 <input
-                  className="form-input"
+                  className="form-input w-full p-2 border border-gray-300 rounded-md mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -64,7 +66,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input w-full p-2 border border-gray-300 rounded-md mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -72,7 +74,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -80,7 +82,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-primary w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition-colors"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -90,7 +92,7 @@ const Signup = () => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div className="my-3 p-3 bg-red-500 text-white rounded-md">
                 {error.message}
               </div>
             )}

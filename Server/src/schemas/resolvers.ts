@@ -41,10 +41,10 @@ const resolvers = {
     
       const user = await User.findById(context.user._id).populate("saveCart");
       const products = user?.saveCart || [];
-      console.log(products)
+      // console.log(products)
       // Group products by name, size, and price to consolidate quantities
       const groupedProducts = products.reduce((acc, product) => {
-        console.log(product.price)
+        // console.log(product.price)
         const key = `${product.name}_${product.price}`; // Unique key based on name, size, and price
         if (acc[key]) {
           acc[key].quantity += 1; // Increment quantity if the product is already in the group
@@ -53,13 +53,13 @@ const resolvers = {
         }
         return acc;
       }, {} as { [key: string]: any });
-      console.log(groupedProducts)
+      // console.log(groupedProducts)
       let totalAmount = 0;
 
       for (const key in groupedProducts) {
         const product = groupedProducts[key];
-       
-        const productName = product.name || "Unknown Product";  // Ensure name is set
+       console.log(product._doc.name)
+        const productName = product._doc.name || "Unknown Product";  // Ensure name is set
         console.log("Creating product for:", productName)
         const stripeProduct = await stripe.products.create({
           
@@ -73,7 +73,7 @@ const resolvers = {
           unit_amount: product._doc.price * 100,
           currency: "usd",
         });
-        console.log(price)
+        // console.log(price)
         totalAmount += product._doc.price * product._doc.quantity; // Multiply price by quantity
         console.log(totalAmount)
         line_items.push({
@@ -81,20 +81,20 @@ const resolvers = {
           quantity: product.quantity,
         });
       }
-    
+    console.log(context.user.id)
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
         mode: "payment",
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
-        customer: context.user.id,
+        customer: context.user._id,
         automatic_tax: { enabled: true },
         customer_email: context.user.email,
         shipping_address_collection: {
           allowed_countries: ["US", "CA"],
         },
-        invoice_creation: { enabled: false }, // Ignoring invoice creation for now
+        invoice_creation: { enabled: true }, // Ignoring invoice creation for now
       });
     
       if (session) {
@@ -103,10 +103,10 @@ const resolvers = {
     
         const order = await Order.create({
           totalAmount,
-          paymentId: 135, // Dummy payment ID, replace with actual payment ID logic
+          paymentId: 135, 
           paymentStatus: "COMPLETED",
           customerDetails: {
-            fullName: "adsa", // Replace with actual customer details
+            fullName: "adsa", 
             email: "adsa",
             address: "adsa",
             city: "adsa",
@@ -121,18 +121,18 @@ const resolvers = {
           { $addToSet: { saveOrder: order._id } }
         );
       }
-      const invoice = await stripe.invoices.create({
-        customer: context.user.id,
-        metadata: {
-          date_of_creation: new Date().toISOString(), // Add current date here
-        },
-        description: `Order created on ${new Date().toLocaleString()}`, // You can also add it to the description
-        statement_descriptor: "Invoice for recent order",
-      });
+      // const invoice = await stripe.invoices.create({
+      //   customer: context.user._id,
+      //   metadata: {
+      //     date_of_creation: new Date().toISOString(), // Add current date here
+      //   },
+      //   description: `Order created on ${new Date().toLocaleString()}`, // You can also add it to the description
+      //   statement_descriptor: "recent order",
+      // });
       // console.log(session);
       // let invoiceId = null;
     
-      return { session: session.id, invoice };
+      return { session: session.id };
     },
     // invoice: async (_parent: any, _args: any, context: any) => {
     // // send a fetch request to stripe about the deatils of the session using the session id
@@ -273,6 +273,7 @@ const resolvers = {
     },
 
     addToCart: async (_parent: any, args: any, context: any) => {
+      console.log(args)
       const user = await User.findByIdAndUpdate(context.user._id, {
         $push: {
           saveCart: args.productId,
