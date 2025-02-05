@@ -1,7 +1,7 @@
 [
     {
         "name": "T-SHIRT (Adult)",
-        "description": "Sizes come in L, XL, XXL",
+        "description": "",
         "size": ["L", "XL", "XXL"],
         "image": "/assets/t-shirt.jpg",
         "price": 20.00,
@@ -10,16 +10,16 @@
     },
     {
         "name": "T-SHIRT (Child)",
-        "description": "Sizes come in S, M",
+        "description": "",
         "size": ["S", "M"],
-        "image": "/assets/t-shirt.jpg",
+        "image": "/assets/child_tshirt.jpeg",
         "price": 16.00,
         "quantity": 10000,
         "category": "T-Shirts (Child)"
     },
     {
         "name": "HOODIES",
-        "description": "Sizes come in S, M, L, XL, XXL",
+        "description": "",
         "size": ["S", "M", "L", "XL", "XXL"],
         "image": "/assets/hoodie.jpg",
         "price": 40.00,

@@ -72,7 +72,7 @@ function Shop() {
                                 <p className="text-gray-700 dark:text-white text-sm mt-1">{product.description}</p>
 
                                 { product.size.length>0 && <><label htmlFor="sizes" className="sr-only">Choose a size</label>
-                                <select id="sizes" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <select id="sizes" className="bg-blue-700 border border-[#38B6FF] text-bg-[#38B6FF] text-sm rounded-e-lg border-s-[#38B6FF] dark:border-s-bg-blue-100 border-s-0 focus:ring-2 focus:ring-blue-100 focus:outline-none block rounded-lg px-sm p-2.5 dark:bg-blue-100 dark:bg-[#38B6FF] dark:placeholder-[#38B6FF] dark:text-[#38B6FF] dark:focus:ring-[#38B6FF] dark:focus:border-blue-600">
                                     <option selected>Choose a size</option>
                                     {product.size.map((size, i) => (
                                         <option key={i} value={size}>{size}</option>
