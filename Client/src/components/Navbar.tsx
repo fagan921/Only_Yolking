@@ -1,12 +1,12 @@
-import { useState, MouseEvent } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 import logo from '/public/assets/only-yolking-txt.png';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const logout = (event: MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+  const logout = () => {
+
     Auth.logout();
   };
 
