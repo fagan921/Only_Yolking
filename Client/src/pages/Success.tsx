@@ -1,25 +1,36 @@
 // import React from 'react';
 // import Layout from '../components/Layout';
 // import { useParams } from "react-router-dom";
-
-import { useEffect } from "react";
-
+// import { useQuery } from "@apollo/client";
+// import { loadStripe } from "@stripe/stripe-js";
+// import { useEffect } from "react";
+// import Stripe from "stripe";
+// import { GET_USER } from "../graphQL/queries/user";
+// const stripe = new Stripe(
+//   "pk_test_51QnYOlPoCoQFktOpFaILGwCmfgYTKRqIZCFF00LdNNog52atxtqFfy2ESH4rewpB167zP1qXblx3ScYEYhagteFK00Sx1KvT8A"
+// );
 function Success() {
-
+    // const { data, error } = useQuery(GET_USER);
+    // console.log(data)
+    // console.log(error)
     const params = new URL(location.href).searchParams;
     const session_id = params.get('session_id');
-
-    useEffect(() => {
+    // let user = data?.getSingleUser|| {};
     
-
-
+  //   useEffect(() => {
+  //     route()
 
 
         
-    })
+  //   },[])
 
 
-    // send a quey to your server to create an invoivce
+  //   // send a quey to your server to create an invoivce
+  //  const route = async () =>{
+  //   const session = await stripe.checkout.sessions.retrieve(
+  //     session_id
+  //   );
+  //  }
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-50 px-8 py-16">

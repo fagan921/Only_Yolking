@@ -133,17 +133,17 @@ const Cart: React.FC = () => {
   console.log(response)
     //   setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
-  useEffect(() => {
-    if (!sessionStorage.getItem("reloaded")) {
-      sessionStorage.setItem("reloaded", "true");
-      window.location.reload();
-    } else {
-      sessionStorage.removeItem("reloaded");
-    }
-  }, []);
-  if (loading) {
-    return <h2>Data is loading, please wait...</h2>;
-  }
+  // useEffect(() => {
+  //   if (!sessionStorage.getItem("reloaded")) {
+  //     sessionStorage.setItem("reloaded", "true");
+  //     window.location.reload();
+  //   } else {
+  //     sessionStorage.removeItem("reloaded");
+  //   }
+  // }, []);
+  // if (loading) {
+  //   return <h2>Data is loading, please wait...</h2>;
+  // }
 
   return (
     <div className="p-4 bg-gray-100">

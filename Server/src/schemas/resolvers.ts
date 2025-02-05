@@ -37,103 +37,136 @@ const resolvers = {
     // },
     checkout: async (_parent: any, _args: any, context: any) => {
       const url = new URL(context.headers.referer).origin;
-      // const order = new Order({ products: args.products });
-      const line_items = [];
-
-      // const { products } = await order.populate('products').exec();
-
-      // const products: any = [];
-
-      // const productIds: any = args.products;
-
-      // console.log(productIds)
-
-      // const products = await Products.find({
-      //   _id: {
-      //     $in: productIds,
-      //   },
-      // });
-
+      const line_items: any[] = [];
+    
       const user = await User.findById(context.user._id).populate("saveCart");
-
       const products = user?.saveCart || [];
+      console.log(products)
+      // Group products by name, size, and price to consolidate quantities
+      const groupedProducts = products.reduce((acc, product) => {
+        console.log(product.price)
+        const key = `${product.name}_${product.price}`; // Unique key based on name, size, and price
+        if (acc[key]) {
+          acc[key].quantity += 1; // Increment quantity if the product is already in the group
+        } else {
+          acc[key] = { ...product, quantity: 1 }; // Create a new group with the product
+        }
+        return acc;
+      }, {} as { [key: string]: any });
+      console.log(groupedProducts)
+      let totalAmount = 0;
 
-      // const products: any = productIds.map((id: any) => {
-      //   return products.find(product => product._id === id);
-      // })
-
-      console.log(products);
-
-      for (let i = 0; i < products.length; i++) {
-        const product = await stripe.products.create({
-          name: products[i].name,
-          description: products[i].description,
-          images: [`${url}/images/${products[i].image}`],
+      for (const key in groupedProducts) {
+        const product = groupedProducts[key];
+       
+        const productName = product.name || "Unknown Product";  // Ensure name is set
+        console.log("Creating product for:", productName)
+        const stripeProduct = await stripe.products.create({
+          
+          name: product._doc.name,
+          description: product.description,
+          images: [`${url}/images/${product.image}`],
         });
-
+    
         const price = await stripe.prices.create({
-          product: product.id,
-          unit_amount: products[i].price * 100,
+          product: stripeProduct.id,
+          unit_amount: product._doc.price * 100,
           currency: "usd",
         });
-
+        console.log(price)
+        totalAmount += product._doc.price * product._doc.quantity; // Multiply price by quantity
+        console.log(totalAmount)
         line_items.push({
           price: price.id,
-          quantity: 1,
+          quantity: product.quantity,
         });
       }
-
-      console.log(line_items);
-
+    
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
         mode: "payment",
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
+        customer: context.user.id,
+        automatic_tax: { enabled: true },
+        customer_email: context.user.email,
+        shipping_address_collection: {
+          allowed_countries: ["US", "CA"],
+        },
+        invoice_creation: { enabled: false }, // Ignoring invoice creation for now
       });
-
-      // check if session is success
-      console.log(session)
-      
-
-      return { session: session.id };
+    
+      if (session) {
+        const userSession = await stripe.checkout.sessions.retrieve(session.id);
+        console.log(userSession);
+    
+        const order = await Order.create({
+          totalAmount,
+          paymentId: 135, // Dummy payment ID, replace with actual payment ID logic
+          paymentStatus: "COMPLETED",
+          customerDetails: {
+            fullName: "adsa", // Replace with actual customer details
+            email: "adsa",
+            address: "adsa",
+            city: "adsa",
+            state: "adsa",
+            zip: "adsa",
+            country: "adsa",
+          },
+        });
+    
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { saveOrder: order._id } }
+        );
+      }
+      const invoice = await stripe.invoices.create({
+        customer: context.user.id,
+        metadata: {
+          date_of_creation: new Date().toISOString(), // Add current date here
+        },
+        description: `Order created on ${new Date().toLocaleString()}`, // You can also add it to the description
+        statement_descriptor: "Invoice for recent order",
+      });
+      // console.log(session);
+      // let invoiceId = null;
+    
+      return { session: session.id, invoice };
     },
+    // invoice: async (_parent: any, _args: any, context: any) => {
+    // // send a fetch request to stripe about the deatils of the session using the session id
+    //   const email = context.user.email; 
 
-  //   invoice: async (_parent: any, args: any, context: any) => {
+    //   // const user = await User.findById(context.user._id).populate("saveCart");
 
+    //   // Step 1: Create a customer
+    //   const customer = await stripe.customers.create({
+    //     email: email,
+    //   });
 
-      // send a fetch request to stripe about the deatils of the session using the session id
+    //   // Step 2: Create an invoice item
+    //   await stripe.invoiceItems.create({
+    //     customer: customer.id,
+    //     amount: 2000, // Amount in cents (e.g., $20.00)
+    //     currency: "usd",
+    //     description: "Test Product",
+    //   });
 
+    //   // Step 3: Create the invoice
+    //   const invoice = await stripe.invoices.create({
+    //     customer: customer.id,
+    //   });
 
-  //     // const user = await User.findById(context.user._id).populate("saveCart");
+    //   // Step 4: Finalize the invoice
+    //   const finalizedInvoice = await stripe.invoices.finalizeInvoice(
+    //     invoice.id
+    //   );
 
-  //     // Step 1: Create a customer
-  //     const customer = await stripe.customers.create({
-  //       email: "customer@example.com",
-  //     });
-
-  //     // Step 2: Create an invoice item
-  //     await stripe.invoiceItems.create({
-  //       customer: customer.id,
-  //       amount: 2000, // Amount in cents (e.g., $20.00)
-  //       currency: "usd",
-  //       description: "Test Product",
-  //     });
-
-  //     // Step 3: Create the invoice
-  //     const invoice = await stripe.invoices.create({
-  //       customer: customer.id,
-  //     });
-
-  //     // Step 4: Finalize the invoice
-  //     const finalizedInvoice = await stripe.invoices.finalizeInvoice(
-  //       invoice.id
-  //     );
-
-  //     // You can now view the invoice in the Stripe dashboard or via API.
-  //     console.log(finalizedInvoice);
-  //   },
+    //   // You can now view the invoice in the Stripe dashboard or via API.
+    //   console.log(finalizedInvoice);
+    //   return finalizedInvoice
+    // },
   },
   Category: {
     products: async (category: any) => {
@@ -172,9 +205,11 @@ const resolvers = {
         throw new GraphQLError("User does not exist!");
       }
       const correctPw = await user.isCorrectPassword(args.password);
+      
       if (!correctPw) {
-        return null;
+        return "hey error here";
       }
+     
       const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },

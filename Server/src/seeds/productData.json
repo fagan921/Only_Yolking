@@ -25,7 +25,7 @@
     },
     {
         "name": "BEANIE",
-        "description": "",
+        "description": "weee",
         "image": "/assets/beanie.jpg",
         "price": 20.00,
         "quantity": 10000,
@@ -33,7 +33,7 @@
     },
     {
         "name": "MUG",
-        "description": "",
+        "description": "weee",
         "image": "/assets/mug.jpg",
         "price": 15.00,
         "quantity": 10000,
@@ -41,7 +41,7 @@
     },
     {
         "name": "STICKERS",
-        "description": "",
+        "description": "weee",
         "image": "/assets/sticker.jpg",
         "price": 2.00,
         "quantity": 10000,
