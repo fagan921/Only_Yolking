@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           <img
             src={truck}
             alt="Food Truck"
-            className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl md:-ml-16"
+            className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-xl md:-ml-16"
           // className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl md:-ml-16"
           />
           {/* text */}

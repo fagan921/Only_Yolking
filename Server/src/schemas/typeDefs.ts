@@ -51,6 +51,7 @@ const typeDefs = `
         getProducts: [Product]
         getOrders:[Order]
        checkout: Checkout
+       
     }
     input OrderInput {
         products: [String]!
@@ -59,6 +60,8 @@ const typeDefs = `
         paymentId: String!
         paymentStatus: String!
         customerDetails: String!
+       
+
     }
 
     type Mutation {

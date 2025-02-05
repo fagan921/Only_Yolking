@@ -19,6 +19,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
+    "stripe": "^17.6.0",
     "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
