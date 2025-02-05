@@ -29,7 +29,7 @@ const Cart: React.FC = () => {
 
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
-  const { loading, data: userData, error } = useQuery(GET_USER);
+  const { loading, data: userData } = useQuery(GET_USER);
 
   // original cart items, but with duplicates
   const userCartItems = userData?.getSingleUser?.saveCart || [];
