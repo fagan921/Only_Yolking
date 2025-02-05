@@ -45,7 +45,7 @@ const resolvers = {
       // Group products by name, size, and price to consolidate quantities
       const groupedProducts = products.reduce((acc, product) => {
         // console.log(product.price)
-        const key = `${product.name}_${product.price}`; // Unique key based on name, size, and price
+        const key = `${product.name}_${product.size}_${product.price}`; // Unique key based on name, size, and price
         if (acc[key]) {
           acc[key].quantity += 1; // Increment quantity if the product is already in the group
         } else {
@@ -81,25 +81,25 @@ const resolvers = {
           quantity: product.quantity,
         });
       }
-    console.log(context.user.id)
+    console.log(context.user._id)
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
         mode: "payment",
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
-        customer: context.user._id,
+        customer: context.user.id,
         automatic_tax: { enabled: true },
         customer_email: context.user.email,
         shipping_address_collection: {
           allowed_countries: ["US", "CA"],
         },
-        invoice_creation: { enabled: true }, // Ignoring invoice creation for now
+        invoice_creation: { enabled: false }, // Ignoring invoice creation for now
       });
     
       if (session) {
-        const userSession = await stripe.checkout.sessions.retrieve(session.id);
-        console.log(userSession);
+        // const userSession = await stripe.checkout.sessions.retrieve(session.id);
+        // console.log(userSession);
     
         const order = await Order.create({
           totalAmount,

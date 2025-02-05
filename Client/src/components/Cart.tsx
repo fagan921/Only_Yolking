@@ -8,7 +8,7 @@ import { GET_USER } from "../graphQL/queries/user.js";
 // import { useStoreContext } from '../utils/';
 // import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../utils/actions.js';
 // import { GET_PRODUCTS } from '../graphQL/queries/products.js';
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_test_51QnYOlPoCoQFktOpFaILGwCmfgYTKRqIZCFF00LdNNog52atxtqFfy2ESH4rewpB167zP1qXblx3ScYEYhagteFK00Sx1KvT8A');
 
 import { ADDTOCART, REMOVEITEMFROMCART, REMOVEFROMCART } from "../graphQL/mutations/cart";
 // const {loading, data}= useQuery(GET_PRODUCTS)
