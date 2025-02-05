@@ -47,7 +47,7 @@ function Navbar() {
           {/* Authentication Links (Desktop) */}
           {Auth.loggedIn() ? (
             <>
-              <div className="text-white font-bold">
+              <div className="text-[white] font-bold">
                 Hey {Auth.getProfile().data.username}!
               </div>
               <button
@@ -70,7 +70,7 @@ function Navbar() {
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <div className="absolute top-16 left-0 w-full bg-blue-500 lg:hidden flex flex-col items-center py-4 space-y-2">
+          <div className="absolute top-25 left-0 w-full bg-skyblue lg:hidden flex flex-col items-center py-4 space-y-2">
             <Link to="/about" className="text-white text-lg font-bold uppercase hover:underline" onClick={() => setIsOpen(false)}>About</Link>
             <Link to="/find-us" className="text-white text-lg font-bold uppercase hover:underline" onClick={() => setIsOpen(false)}>Find Us</Link>
             <Link to="/menu" className="text-white text-lg font-bold uppercase hover:underline" onClick={() => setIsOpen(false)}>Menu</Link>
@@ -96,7 +96,7 @@ function Navbar() {
                 </Link> */}
                 <button
                   onClick={logout}
-                  className="bg-red-500 text-white px-4 py-2 rounded-lg shadow hover:bg-red-600 transition"
+                  className="bg-[#FCD91A] text-[#5766BC] px-4 py-2 rounded-lg shadow hover:bg-red-600 transition"
                 >
                   Logout
                 </button>
@@ -120,7 +120,7 @@ function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white text-6xl"
+            className="text-[#FFF4E5] lg:hidden text-[whit]e text-6xl"
           >
             ☰
           </button>
