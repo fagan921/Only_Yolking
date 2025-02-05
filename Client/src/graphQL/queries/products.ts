@@ -6,6 +6,7 @@ export const GET_PRODUCTS = gql`
     _id
     name
     description
+    size
     image
     price
     quantity
