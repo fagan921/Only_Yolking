@@ -48,7 +48,7 @@ function Navbar() {
           {Auth.loggedIn() ? (
             <>
               <div className="text-[white] font-bold">
-                Hey {Auth.getProfile().data.username}!
+                <Link to="/user" className="text-white font-bold uppercase hover:underline">Hey {Auth.getProfile().data.username}!</Link>
               </div>
               <button
                 onClick={logout}

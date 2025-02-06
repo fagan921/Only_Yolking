@@ -219,12 +219,14 @@ const resolvers = {
     //   const updatedUser = await User.
     // }
     deleteUser: async (_parent: any, _args: any, context: any) => {
+      console.log({ _id: context.user._id })
       const user = await User.findByIdAndDelete({ _id: context.user._id });
+      
       if (!user) {
         return null;
       }
 
-      return { message: "User has been deleted" };
+      return user;
     },
     createProduct: async (
       _parent: any,

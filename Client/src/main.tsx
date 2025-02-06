@@ -15,6 +15,7 @@ import Signup from './components/SignUp';
 import Success from './pages/Success';
 
 import './styles/globals.css';     
+import User from './pages/User';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,8 @@ const router = createBrowserRouter([
       { path: 'cart', element: <Cart /> },
       { path: 'login', element: <Login /> },
       { path: 'signup', element: <Signup /> },
-      { path: "success", element: <Success />}
+      { path: "success", element: <Success />},
+      { path: "user", element: <User />}
     ],
   },
 ]);
