@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "seed": "npm run build && node --max-old-space-size=8192 dist/seeds/seed.js",
+    "seed": "npm run build && node dist/seeds/seed.js",
     "watch": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
