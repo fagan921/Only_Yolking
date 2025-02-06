@@ -19,7 +19,7 @@ function Menu() {
       {/* Menu Image Section */}
       <div className="flex justify-center">
         <img
-          src="/dist/assets/IMG_0331.JPG" // Updated image path
+          src="assets/IMG_0331.JPG" // Updated image path
           alt="Only Yolking Menu"
           className="w-full max-w-6xl h-auto rounded-lg shadow-lg border border-gray-300"
         />
