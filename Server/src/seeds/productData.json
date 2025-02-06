@@ -28,7 +28,7 @@
     },
     {
         "name": "BEANIE",
-        "description": "",
+        "description": "weee",
         "size": [],
         "image": "/assets/beanie.jpg",
         "price": 20.00,
@@ -37,7 +37,7 @@
     },
     {
         "name": "MUG",
-        "description": "",
+        "description": "weee",
         "size": [],
         "image": "/assets/mug.jpg",
         "price": 15.00,
@@ -46,7 +46,7 @@
     },
     {
         "name": "STICKERS",
-        "description": "",
+        "description": "weee",
         "size": [],
         "image": "/assets/sticker.jpg",
         "price": 2.00,
