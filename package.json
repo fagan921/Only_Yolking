@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "ls -alh Server/dist && node Server/dist/server.js",
     "start:dev": "concurrently \"cd Server && npm run watch\" \"wait-on tcp:3001 && cd Client && npm run dev\"",
