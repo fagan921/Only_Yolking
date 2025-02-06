@@ -81,7 +81,7 @@ const resolvers = {
           quantity: product.quantity,
         });
       }
-    console.log(context.user._id)
+    // console.log(context.user._id)
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
         line_items,
@@ -219,12 +219,14 @@ const resolvers = {
     //   const updatedUser = await User.
     // }
     deleteUser: async (_parent: any, _args: any, context: any) => {
+    
       const user = await User.findByIdAndDelete({ _id: context.user._id });
+      
       if (!user) {
         return null;
       }
 
-      return { message: "User has been deleted" };
+      return user;
     },
     createProduct: async (
       _parent: any,
