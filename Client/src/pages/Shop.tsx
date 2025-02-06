@@ -44,14 +44,18 @@ function Shop() {
 
 
     return (
-        <div className="container mx-auto px-0 py-10">
-            <div className="">
-                {/* bg-blue-400 py-4 shadow-md right-150px */}
-                <div className="text-white font-bold uppercase hover:underline">
-                    {notification}
-                </div>
-
+        <div className="container mx-auto py-10 px-4 text-center">
+        <h1
+        className="text-4xl sm:text-5xl text-blue-400 mb-5"
+        style={{ fontFamily: 'Genty Regular, serif' }}>
+                Merch
+            </h1>
+            {/* Notification */}
+            {notification && (
+            <div className="fixed top-6 left-6 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg text-lg font-semibold transition-opacity duration-300 ease-in-out">
+                {notification}
             </div>
+)}
             {loading ? (
                 <h1 className="text-center text-2xl font-semibold">Loading...</h1>
             ) : (
