@@ -22,7 +22,15 @@
 .custom{
     font-family: "MyCustomFont", sans-serif;
 }
-
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  
+  .hover\:animate-wiggle:hover {
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
 /* 
 @theme {
     --breakpoint-xs: 30rem;

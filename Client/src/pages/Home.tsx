@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import truck from "../images/truck.png";
 import sandwich1 from "../images/sandwich-1.png"
 import sandwich2 from "../images/sandwich-2.png"
@@ -18,6 +18,13 @@ import { Link } from "react-router-dom";
 
 
 const Home: React.FC = () => {
+  const [animate, setAnimate] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setAnimate(false), 1650); // Remove animation after 1s
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div>
       {/* <section className="hero bg-skyblue text-[#FFF4E5] -mt-8">
@@ -29,7 +36,7 @@ const Home: React.FC = () => {
           <img
             src={truck}
             alt="Food Truck"
-            className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-xl md:-ml-16"
+            className={`w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-xl md:-ml-16 ${animate ? "animate-bounce" : ""}`}
           // className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl md:-ml-16"
           />
           {/* text */}
@@ -41,7 +48,10 @@ const Home: React.FC = () => {
             </h1>
             <a href="https://www.doordash.com/store/only-yolking-eugene-31165337/"
               target="_blank"
-              rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide">
+              rel="noopener noreferrer"  className="inline-block mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semibold text-2xl shadow-md border border-[#38B6FF] font-roboto tracking-wide 
+              hover:animate-wiggle"
+        
+            >
               {/* className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#38B6FF] font-roboto tracking-wide"> */}
               ORDER NOW
             </a>
@@ -72,7 +82,8 @@ const Home: React.FC = () => {
             </p>
             <a href="https://www.doordash.com/store/only-yolking-eugene-31165337/"
               target="_blank"
-              rel="noopener noreferrer" className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide">
+              rel="noopener noreferrer"  className="inline-block mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semibold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide 
+              hover:animate-wiggle">
               GET CRACKIN'
             </a>
           </div>
@@ -157,7 +168,8 @@ const Home: React.FC = () => {
             </p>
             <div className='mt-10'>
             <Link to='/gallery'
-            className="mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semi-bold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide">
+            className="inline-block mt-10 bg-[#FCD91A] text-[#5766BC] px-3 py-4 rounded-xl font-semibold text-2xl shadow-md hover:bg-opacity-90 border border-[#FFF4E5] font-roboto tracking-wide 
+            hover:animate-wiggle">
               PET GALLERY
             </Link>
             </div>
