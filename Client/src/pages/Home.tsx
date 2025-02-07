@@ -21,7 +21,7 @@ const Home: React.FC = () => {
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setAnimate(false), 1650); // Remove animation after 1s
+    const timeout = setTimeout(() => setAnimate(false), 1630); // Remove animation after 1s
     return () => clearTimeout(timeout);
   }, []);
 
