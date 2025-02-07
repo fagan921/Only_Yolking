@@ -1,4 +1,4 @@
-# 🍳Only_Yolking
+# Only Yolking
 
 Bringing Only Yolking to life online—where users can crack into our story, shell out for exclusive merch, and feast their eyes on the menu before hatching their next order!
 
@@ -10,6 +10,7 @@ Bringing Only Yolking to life online—where users can crack into our story, she
 - [Usage](#usage)
 - [Development](#development)
 - [Screenshots](#screenshots)
+- [Deployed Application](#deployed-application)
 - [License](#license)
 
 ## Project Description
@@ -57,8 +58,11 @@ npm run seed
 ```
 
 ## Screenshots
-_Add screenshots of the application here._
+![Home page example](https://i.imgur.com/VAYJDrK.png)
+![Shop page example](https://i.imgur.com/JSVbcOY.png)
+
+## Deployed Application
+Access the live application here: _[[Only Yolking](https://only-yolking.onrender.com/)]_ 
 
 ## License
-This project is licensed under the ISC License.
-
+This project is licensed under the MIT License.
